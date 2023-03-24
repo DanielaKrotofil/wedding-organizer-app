@@ -2,18 +2,22 @@
 @import '../settings/rwd';
 
 
-
 .banner {
     position:relative;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 15rem 0;
+
+    span {
+        color: $color-green-basic;
+    }
 
     @include mobile {
         width: 100%;
-        padding: 12rem 0;
         display: flex;
+        padding: 9rem 0;
     }
 
     &::before {
@@ -22,10 +26,15 @@
         background-size: cover;
         background-image: url("https://singaporebrides.com/articles/wp-content/uploads/2018/06/wedding-photography-singapore-darren-and-jade-feature.jpg");
         background-color: $color-green-basic;
-        opacity:0.5;
+        background-position: center;
+        opacity:0.45;
         top: 0px;
         right: 0px;
         bottom: 0px;
         left: 0px;
+
+        @include mobile {
+            background-position: bottom;
+        }
       }
 }
