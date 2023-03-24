@@ -4,8 +4,11 @@ import App from './App'
 import './sass/main.scss'
 import './firebase.js'
 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <App/>
   </React.StrictMode>,
 )
+
+

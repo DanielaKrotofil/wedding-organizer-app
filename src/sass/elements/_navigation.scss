@@ -1,0 +1,33 @@
+@import '../settings/variables';
+@import '../settings/rwd';
+
+.nav {
+    padding-bottom: 3em;
+
+    .menubar {
+        width:100%;
+        list-style:none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .link {
+            cursor: pointer;
+            padding:.55em .45em;
+            width:19%;
+            font-size:1.2em;
+            text-align:center;
+
+            &:hover {
+                padding-left:.75em;
+                font-weight: bolder;
+                border-bottom: 0.4em solid $color-dark-grey;
+            }
+
+            a {
+                text-decoration: none;
+                color: $color-dark-grey;
+            }
+        }
+    }
+}

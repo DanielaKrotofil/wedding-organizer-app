@@ -1,42 +1,45 @@
-import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './sass/main.scss'
+import { createRoot } from 'react-dom/client';
+import { HashRouter, Route, Routes, Link, NavLink, Outlet} from 'react-router-dom';
+import Home from './Home';
+import Vision from './Vision';
+import Guests from './Guests';
 
-import { collection, getDocs } from "firebase/firestore";
-import { db } from './firebase';
-
-
-
-import image01 from '../src/assets/img01.jpg'
-
-
-function App() {
-  const [styles, setStyles] = useState([]);
-
-  useEffect(() => {
-    getDocs(collection(db, "styles")).then((querySnapshot) => {
-      const tempArr = [];
-
-      querySnapshot.forEach((doc) => {
-        tempArr.push(doc.data());
-      })
-
-      setStyles(tempArr)
-    });
-    }, [])
+const Layout = () => {
 
   return (
+      <>
+          <nav className='nav'>
+              <ul className='menubar'>
+                  <li className='link'><NavLink to='/'>Home</NavLink></li>
+                  <li className='link'><NavLink to='vision'>Vision</NavLink></li>
+                  <li className='link'><NavLink to='guests'>Guests</NavLink></li>
+                  <li className='link'><NavLink to='/'>Wedding Party</NavLink></li>
+                  <li className='link'><NavLink to='/'>Formalities</NavLink></li>
+              </ul>
+          </nav>
+      </>
+  )
+}
+
+function App() {
+  return (
     <>
-    <h1>Wedding Planner</h1>
-    {styles.map(({theme, characteristics, mainColors}) => (
-      <div>
-        <h3>{theme}</h3>
-        <p>Primary colors: {mainColors}</p>
-        <p>Characteristic: {characteristics}</p>
-      </div>
-    ))}
-    <img src={image01} alt='image 01'/>
+    <header className='pageHeader'>
+      <HashRouter>
+            <Routes>
+                <Route element={<Layout/>}>
+                    <Route path='/' element={<Home/>}/>
+                    <Route path='vision' element={<Vision/>}/>
+                    <Route path="guests" element={<Guests/>}/>
+                </Route>
+            </Routes>
+      </HashRouter>
+    </header>
+
+    <section className='banner'>
+      <h1>Wedding <span>Planner</span> </h1>
+    </section>
     </>
   )
 }
@@ -44,26 +47,13 @@ function App() {
 export default App
 
 /*
-<div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Zaczynamy prace nad aplikacją w react</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    <HashRouter>
+            <Routes>
+                <Route element={<Layout/>}>
+                    <Route path='/' element={<Home/>}/>
+                    <Route path='blog' element={<Blog/>}/>
+                    <Route path="pricing" element={<Pricing/>}/>
+                </Route>
+            </Routes>
+      </HashRouter>
 */
