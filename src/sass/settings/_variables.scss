@@ -1,0 +1,37 @@
+$color-white: #F7F7F7;
+$color-beige: #F2E7D5;
+$color-green-basic: #6D9886;
+$color-dark-grey: #393E46;
+$color-black: #242424;
+$font-family-basic: 'Lato', sans-serif;
+$font-family-ornamental: 'Parisienne', cursive;
+$font-family-freehand: 'Oooh Baby', cursive;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family-basic;
+    background-color: $color-white;
+
+    h1 {
+        font-size: 3rem;
+        font-family: $font-family-ornamental;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        margin: 0 auto;
+        width: 1200px;
+    }
+}

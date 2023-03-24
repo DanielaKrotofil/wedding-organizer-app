@@ -31,7 +31,7 @@ function App() {
     <h1>Wedding Planner</h1>
     {styles.map(({theme, characteristics, mainColors}) => (
       <div>
-        <h4>{theme}</h4>
+        <h3>{theme}</h3>
         <p>Primary colors: {mainColors}</p>
         <p>Characteristic: {characteristics}</p>
       </div>
