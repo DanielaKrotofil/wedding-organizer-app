@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 187,
+            "activePatchIndex": 211,
             "patches": [
                 {
                     "date": 1679610917987,
@@ -756,6 +756,102 @@
                 {
                     "date": 1679682058476,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,46 +43,8 @@\n             </Routes>\n       </HashRouter>\n     </header>\n \n-\n-    <section className='container about'>\n-      <h2>About App</h2>\n-      <div className=\"about__app\">\n-        <div className=\"about__app__item\">\n-          <span className=\"about__app__item_img\">\n-            <FontAwesomeIcon icon={faList} />\n-          </span>\n-          <h3>Lists</h3>\n-          <p>You can find here to-do list, list of guests and more!</p>\n-        </div>\n-\n-        <div className=\"about__app__item\">\n-          <span className=\"about__app__item_img\">\n-            <FontAwesomeIcon icon={faFaceGrinHearts} />\n-          </span>\n-          <h3>Help</h3>\n-          <p>Help with rganiztion of wedding with pleasure: formal tips, styling tips, decorating tips and more</p>\n-        </div>\n-\n-        <div className=\"about__app__item\">\n-          <span className=\"about__app__item_img\">\n-            <FontAwesomeIcon icon={faWifi} />\n-          </span>\n-          <h3>Internet</h3>\n-          <p>To use this app you need to be connected with the Internet</p>\n-        </div>\n-\n-        <div className=\"about__app__item\">\n-          <span className=\"about__app__item_img\">\n-            <FontAwesomeIcon icon={faPiggyBank} />\n-          </span>\n-          <h3>Free</h3>\n-          <p>No need money to use this app</p>\n-        </div>\n-      </div>\n-    </section>\n-\n     <footer>\n       <span>© 2023 Wedding Organizer</span>\n     </footer>\n     </>\n"
+                },
+                {
+                    "date": 1679682238199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { createRoot } from 'react-dom/client';\n import { HashRouter, Route, Routes, Link, NavLink, Outlet} from 'react-router-dom';\n import Home from './Home';\n import Vision from './Vision';\n-import Guests from './Guests';\n+import Guests from './components/Guests';\n import Formalities from './Formalities';\n import Weddingparty from './Weddingparty';\n import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';\n import { faList, faWifi, faPiggyBank, faFaceGrinHearts } from '@fortawesome/free-solid-svg-icons';\n"
+                },
+                {
+                    "date": 1679682244185,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import './sass/main.scss'\n import { createRoot } from 'react-dom/client';\n import { HashRouter, Route, Routes, Link, NavLink, Outlet} from 'react-router-dom';\n import Home from './Home';\n-import Vision from './Vision';\n+import Vision from './components/Vision';\n import Guests from './components/Guests';\n import Formalities from './Formalities';\n import Weddingparty from './Weddingparty';\n import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';\n"
+                },
+                {
+                    "date": 1679682252739,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { HashRouter, Route, Routes, Link, NavLink, Outlet} from 'react-router-dom';\n import Home from './Home';\n import Vision from './components/Vision';\n import Guests from './components/Guests';\n-import Formalities from './Formalities';\n+import Formalities from './components/Formalities';\n import Weddingparty from './Weddingparty';\n import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';\n import { faList, faWifi, faPiggyBank, faFaceGrinHearts } from '@fortawesome/free-solid-svg-icons';\n \n"
+                },
+                {
+                    "date": 1679682261820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n import './sass/main.scss'\n import { createRoot } from 'react-dom/client';\n import { HashRouter, Route, Routes, Link, NavLink, Outlet} from 'react-router-dom';\n-import Home from './Home';\n+import Home from './components/Home';\n import Vision from './components/Vision';\n import Guests from './components/Guests';\n import Formalities from './components/Formalities';\n-import Weddingparty from './Weddingparty';\n+import Weddingparty from './components/Weddingparty';\n import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';\n import { faList, faWifi, faPiggyBank, faFaceGrinHearts } from '@fortawesome/free-solid-svg-icons';\n \n const Layout = () => {\n"
+                },
+                {
+                    "date": 1679682510862,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,8 @@\n import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';\n import { faList, faWifi, faPiggyBank, faFaceGrinHearts } from '@fortawesome/free-solid-svg-icons';\n \n const Layout = () => {\n-\n   return (\n       <>\n           <nav className='nav'>\n               <ul className='menubar'>\n"
+                },
+                {
+                    "date": 1679682912072,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n import Weddingparty from './components/Weddingparty';\n import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';\n import { faList, faWifi, faPiggyBank, faFaceGrinHearts } from '@fortawesome/free-solid-svg-icons';\n \n+\n const Layout = () => {\n   return (\n       <>\n           <nav className='nav'>\n"
+                },
+                {
+                    "date": 1679682918071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,11 @@\n import Formalities from './components/Formalities';\n import Weddingparty from './components/Weddingparty';\n import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';\n import { faList, faWifi, faPiggyBank, faFaceGrinHearts } from '@fortawesome/free-solid-svg-icons';\n+import { collection, getDocs } from \"../firebase/firestore\";\n+import { db } from '../firebase';\n \n-\n const Layout = () => {\n   return (\n       <>\n           <nav className='nav'>\n"
+                },
+                {
+                    "date": 1679682945816,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,8 @@\n import Formalities from './components/Formalities';\n import Weddingparty from './components/Weddingparty';\n import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';\n import { faList, faWifi, faPiggyBank, faFaceGrinHearts } from '@fortawesome/free-solid-svg-icons';\n-import { collection, getDocs } from \"../firebase/firestore\";\n-import { db } from '../firebase';\n \n const Layout = () => {\n   return (\n       <>\n"
+                },
+                {
+                    "date": 1679686015582,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n import Weddingparty from './components/Weddingparty';\n import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';\n import { faList, faWifi, faPiggyBank, faFaceGrinHearts } from '@fortawesome/free-solid-svg-icons';\n \n+\n const Layout = () => {\n   return (\n       <>\n           <nav className='nav'>\n"
+                },
+                {
+                    "date": 1679686020749,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,10 @@\n import Formalities from './components/Formalities';\n import Weddingparty from './components/Weddingparty';\n import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';\n import { faList, faWifi, faPiggyBank, faFaceGrinHearts } from '@fortawesome/free-solid-svg-icons';\n+import { db } from './firebase';\n \n-\n const Layout = () => {\n   return (\n       <>\n           <nav className='nav'>\n"
+                },
+                {
+                    "date": 1679686041694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';\n import { faList, faWifi, faPiggyBank, faFaceGrinHearts } from '@fortawesome/free-solid-svg-icons';\n import { db } from './firebase';\n \n+\n const Layout = () => {\n   return (\n       <>\n           <nav className='nav'>\n"
+                },
+                {
+                    "date": 1679686076750,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,10 @@\n import Weddingparty from './components/Weddingparty';\n import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';\n import { faList, faWifi, faPiggyBank, faFaceGrinHearts } from '@fortawesome/free-solid-svg-icons';\n import { db } from './firebase';\n+import { collection, getDocs } from \"./firebase\";\n \n-\n const Layout = () => {\n   return (\n       <>\n           <nav className='nav'>\n"
+                },
+                {
+                    "date": 1679686132817,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n import Weddingparty from './components/Weddingparty';\n import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';\n import { faList, faWifi, faPiggyBank, faFaceGrinHearts } from '@fortawesome/free-solid-svg-icons';\n import { db } from './firebase';\n-import { collection, getDocs } from \"./firebase\";\n+import { collection, getDocs } from \"./firebase/firestore\";\n \n const Layout = () => {\n   return (\n       <>\n"
+                },
+                {
+                    "date": 1679686149691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,11 +7,10 @@\n import Formalities from './components/Formalities';\n import Weddingparty from './components/Weddingparty';\n import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';\n import { faList, faWifi, faPiggyBank, faFaceGrinHearts } from '@fortawesome/free-solid-svg-icons';\n-import { db } from './firebase';\n-import { collection, getDocs } from \"./firebase/firestore\";\n \n+\n const Layout = () => {\n   return (\n       <>\n           <nav className='nav'>\n"
+                },
+                {
+                    "date": 1679686450665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n import Formalities from './components/Formalities';\n import Weddingparty from './components/Weddingparty';\n import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';\n import { faList, faWifi, faPiggyBank, faFaceGrinHearts } from '@fortawesome/free-solid-svg-icons';\n+import './firebase'\n \n \n const Layout = () => {\n   return (\n"
+                },
+                {
+                    "date": 1679686516953,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,8 @@\n import Vision from './components/Vision';\n import Guests from './components/Guests';\n import Formalities from './components/Formalities';\n import Weddingparty from './components/Weddingparty';\n-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';\n-import { faList, faWifi, faPiggyBank, faFaceGrinHearts } from '@fortawesome/free-solid-svg-icons';\n import './firebase'\n \n \n const Layout = () => {\n"
+                },
+                {
+                    "date": 1679686632405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,10 @@\n import Guests from './components/Guests';\n import Formalities from './components/Formalities';\n import Weddingparty from './components/Weddingparty';\n import './firebase'\n+import { db } from '../firebase';\n \n-\n const Layout = () => {\n   return (\n       <>\n           <nav className='nav'>\n"
+                },
+                {
+                    "date": 1679686639800,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n import Guests from './components/Guests';\n import Formalities from './components/Formalities';\n import Weddingparty from './components/Weddingparty';\n import './firebase'\n-import { db } from '../firebase';\n+import { db } from './firebase';\n \n const Layout = () => {\n   return (\n       <>\n"
+                },
+                {
+                    "date": 1679686835353,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n import Guests from './components/Guests';\n import Formalities from './components/Formalities';\n import Weddingparty from './components/Weddingparty';\n import './firebase'\n+\n import { db } from './firebase';\n \n const Layout = () => {\n   return (\n"
+                },
+                {
+                    "date": 1679686906041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,8 @@\n import Formalities from './components/Formalities';\n import Weddingparty from './components/Weddingparty';\n import './firebase'\n \n-import { db } from './firebase';\n \n const Layout = () => {\n   return (\n       <>\n"
+                },
+                {
+                    "date": 1679687523798,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n import Weddingparty from './components/Weddingparty';\n import './firebase'\n \n \n+\n const Layout = () => {\n   return (\n       <>\n           <nav className='nav'>\n"
+                },
+                {
+                    "date": 1679687533950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,11 +6,11 @@\n import Guests from './components/Guests';\n import Formalities from './components/Formalities';\n import Weddingparty from './components/Weddingparty';\n import './firebase'\n+import { db } from './firebase';\n \n \n-\n const Layout = () => {\n   return (\n       <>\n           <nav className='nav'>\n"
+                },
+                {
+                    "date": 1679687540907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,8 @@\n import Guests from './components/Guests';\n import Formalities from './components/Formalities';\n import Weddingparty from './components/Weddingparty';\n import './firebase'\n-import { db } from './firebase';\n \n \n const Layout = () => {\n   return (\n"
+                },
+                {
+                    "date": 1679687669203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import Vision from './components/Vision';\n import Guests from './components/Guests';\n import Formalities from './components/Formalities';\n import Weddingparty from './components/Weddingparty';\n-import './firebase'\n+import './firebase';\n \n \n const Layout = () => {\n   return (\n"
                 }
             ],
             "date": 1679610917987,

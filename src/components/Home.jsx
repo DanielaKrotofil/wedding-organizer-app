@@ -1,5 +1,4 @@
 import React from "react";
-import './sass/main.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faList, faWifi, faPiggyBank, faFaceGrinHearts } from '@fortawesome/free-solid-svg-icons';
 

@@ -1,16 +1,15 @@
 import './sass/main.scss'
 import { createRoot } from 'react-dom/client';
 import { HashRouter, Route, Routes, Link, NavLink, Outlet} from 'react-router-dom';
-import Home from './Home';
-import Vision from './Vision';
-import Guests from './Guests';
-import Formalities from './Formalities';
-import Weddingparty from './Weddingparty';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faList, faWifi, faPiggyBank, faFaceGrinHearts } from '@fortawesome/free-solid-svg-icons';
+import Home from './components/Home';
+import Vision from './components/Vision';
+import Guests from './components/Guests';
+import Formalities from './components/Formalities';
+import Weddingparty from './components/Weddingparty';
+import './firebase';
+
 
 const Layout = () => {
-
   return (
       <>
           <nav className='nav'>
