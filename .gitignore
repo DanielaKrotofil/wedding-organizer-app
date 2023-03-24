@@ -16,3 +16,4 @@ dist/
 .css
 .lh
 .vite.config.js
+.json
