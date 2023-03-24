@@ -7,7 +7,7 @@ import React from "react";
 
 
 const Vision = () => {
-    const [styles, setStyles] = useState([]);
+//    const [styles, setStyles] = useState([]);
 
  //   useEffect(() => {
  //       getDocs(collection(db, "styles")).then((querySnapshot) => {
@@ -24,7 +24,7 @@ const Vision = () => {
     return (
         <>
             <h1>Your vision</h1>
-            <img src={image01} alt='image 01'/>
+            
         </>
     )
 }
@@ -39,4 +39,6 @@ export default Vision
                 <p>Characteristic: {characteristics}</p>
             </div>
             ))}
+
+            <img src={image01} alt='image 01'/>
 */

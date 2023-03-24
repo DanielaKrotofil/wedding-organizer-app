@@ -41,6 +41,7 @@
 }
 
 .about {
+
     text-align: center;
     color: $color-dark-grey;
 
@@ -50,11 +51,20 @@
         align-items: center;
         justify-content: center;
 
+        @include mobile {
+            flex-direction: column;
+        }
+
         &__item {
             display: flex;
             flex-direction: column;
             padding: 1rem;
             max-width: 22%;
+
+            @include mobile {
+                max-width: 75%;
+                padding: 0.1rem;
+            }
 
             h3 {
                 font-weight: 700;
