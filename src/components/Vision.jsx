@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from 'react'
 import { collection, getDocs } from "firebase/firestore";
 import { db } from '../firebase';
+import testPhoto from '../assets/img01.jpg'
 
 const Vision = () => {
     const [styles, setStyles] = useState([]);
@@ -29,8 +30,10 @@ const Vision = () => {
                 <p>Primary colors: {mainColors}</p>
                 <p>Another colors: {additionalColors}</p>
                 <p>Decorations: {decorations}</p>
-            </div>))}
+            </div>))
+        }
         </div>
+        <img src={testPhoto} alt='Test Photo'/>
         </>
     )
 }

@@ -17,3 +17,4 @@ dist/
 .lh
 .vite.config.js
 .json
+firebase.js
