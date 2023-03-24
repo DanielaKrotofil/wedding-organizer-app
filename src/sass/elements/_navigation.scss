@@ -19,9 +19,8 @@
             text-align:center;
 
             &:hover {
-                padding-left:.75em;
                 font-weight: bolder;
-                border-bottom: 0.4em solid $color-dark-grey;
+                border-bottom: 0.2em solid $color-dark-grey;
             }
 
             a {

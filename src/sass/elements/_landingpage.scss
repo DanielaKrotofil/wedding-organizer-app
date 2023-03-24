@@ -27,6 +27,7 @@
         background-image: url("https://singaporebrides.com/articles/wp-content/uploads/2018/06/wedding-photography-singapore-darren-and-jade-feature.jpg");
         background-color: $color-green-basic;
         background-position: center;
+        background-repeat: no-repeat;
         opacity:0.45;
         top: 0px;
         right: 0px;
@@ -37,4 +38,41 @@
             background-position: bottom;
         }
       }
+}
+
+.about {
+    text-align: center;
+    color: $color-dark-grey;
+
+    &__app {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            max-width: 22%;
+
+            h3 {
+                font-weight: 700;
+                margin-bottom: 1rem;
+            }
+
+            &_img {
+                color: $color-green-basic;
+                font-size: 2rem;
+                margin: 1rem;
+            }
+        }
+    }
+}
+
+footer{
+    background-color: $color-green-basic;
+    color: $color-beige;
+    padding: 1rem;
+    font-size: small;
 }
