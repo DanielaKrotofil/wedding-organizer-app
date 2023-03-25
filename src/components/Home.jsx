@@ -25,7 +25,7 @@ const Home = () => {
             <FontAwesomeIcon icon={faFaceGrinHearts} />
           </span>
           <h3>Help</h3>
-          <p>Help with rganiztion of wedding with pleasure: formal tips, styling tips, decorating tips and more</p>
+          <p>Help with organization of wedding with pleasure: formal tips, styling tips, decorating tips and more</p>
         </div>
 
         <div className="about__app__item">

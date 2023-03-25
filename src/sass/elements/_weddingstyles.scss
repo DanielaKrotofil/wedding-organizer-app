@@ -1,0 +1,52 @@
+@import '../settings/variables';
+
+.wedding-styles {
+    
+
+    h2 {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    &__elements {
+        display: flex;
+        gap: 0.1em;
+        line-height: 1.4em;
+        flex-wrap: wrap;
+
+        &-single{
+            color: $color-green-basic;
+            width: 30%;
+
+            p {
+                font-weight: 900;
+            }
+        }
+    }
+    .dropdown {
+        border: none;
+        background-color: $color-green-basic;
+        color: $color-beige;
+        cursor: pointer;
+        padding: 1em 2em;
+        width: 100%;
+        text-align: center;
+
+        :hover {
+            background-color: $color-dark-grey;
+        }
+    }
+
+    &__inspirations {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.1em;
+
+        &-buttons {
+            padding: 1em;
+            display: flex;
+            gap: 2em;
+        }
+    }
+}
