@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 211,
+            "activePatchIndex": 217,
             "patches": [
                 {
                     "date": 1679610917987,
@@ -852,6 +852,30 @@
                 {
                     "date": 1679687669203,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import Vision from './components/Vision';\n import Guests from './components/Guests';\n import Formalities from './components/Formalities';\n import Weddingparty from './components/Weddingparty';\n-import './firebase'\n+import './firebase';\n \n \n const Layout = () => {\n   return (\n"
+                },
+                {
+                    "date": 1679851031896,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n \n const App = () => {\n   return (\n     <>\n-    <header className='pageHeader'>\n+    < className='pageHeader'>\n       <HashRouter>\n             <Routes>\n                 <Route element={<Layout/>}>\n                     <Route path='/' element={<Home/>}/>\n@@ -40,9 +40,9 @@\n                     <Route path='formalities' element={<Formalities/>}/>\n                 </Route>\n             </Routes>\n       </HashRouter>\n-    </header>\n+    </>\n \n     <footer>\n       <span>© 2023 Wedding Organizer</span>\n     </footer>\n"
+                },
+                {
+                    "date": 1679851049874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n \n const App = () => {\n   return (\n     <>\n-    < className='pageHeader'>\n+    <header className='pageHeader'>\n       <HashRouter>\n             <Routes>\n                 <Route element={<Layout/>}>\n                     <Route path='/' element={<Home/>}/>\n@@ -40,9 +40,9 @@\n                     <Route path='formalities' element={<Formalities/>}/>\n                 </Route>\n             </Routes>\n       </HashRouter>\n-    </>\n+    </header>\n \n     <footer>\n       <span>© 2023 Wedding Organizer</span>\n     </footer>\n"
+                },
+                {
+                    "date": 1679851227598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n \n const App = () => {\n   return (\n     <>\n-    <header className='pageHeader'>\n+    <>\n       <HashRouter>\n             <Routes>\n                 <Route element={<Layout/>}>\n                     <Route path='/' element={<Home/>}/>\n@@ -40,9 +40,9 @@\n                     <Route path='formalities' element={<Formalities/>}/>\n                 </Route>\n             </Routes>\n       </HashRouter>\n-    </header>\n+    </>\n \n     <footer>\n       <span>© 2023 Wedding Organizer</span>\n     </footer>\n"
+                },
+                {
+                    "date": 1679851274688,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,8 @@\n \n const App = () => {\n   return (\n     <>\n-    <>\n       <HashRouter>\n             <Routes>\n                 <Route element={<Layout/>}>\n                     <Route path='/' element={<Home/>}/>\n@@ -40,13 +39,13 @@\n                     <Route path='formalities' element={<Formalities/>}/>\n                 </Route>\n             </Routes>\n       </HashRouter>\n-    </>\n \n-    <footer>\n-      <span>© 2023 Wedding Organizer</span>\n-    </footer>\n+\n+      <footer>\n+        <span>© 2023 Wedding Organizer</span>\n+      </footer>\n     </>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1679851368475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,14 @@\n-import './sass/main.scss'\n import { createRoot } from 'react-dom/client';\n import { HashRouter, Route, Routes, Link, NavLink, Outlet} from 'react-router-dom';\n import Home from './components/Home';\n import Vision from './components/Vision';\n import Guests from './components/Guests';\n import Formalities from './components/Formalities';\n import Weddingparty from './components/Weddingparty';\n-import './firebase';\n \n \n+\n const Layout = () => {\n   return (\n       <>\n           <nav className='nav'>\n"
+                },
+                {
+                    "date": 1679851413710,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,8 @@\n import Guests from './components/Guests';\n import Formalities from './components/Formalities';\n import Weddingparty from './components/Weddingparty';\n \n-\n-\n const Layout = () => {\n   return (\n       <>\n           <nav className='nav'>\n"
                 }
             ],
             "date": 1679610917987,

@@ -1,4 +1,3 @@
-import './sass/main.scss'
 import { createRoot } from 'react-dom/client';
 import { HashRouter, Route, Routes, Link, NavLink, Outlet} from 'react-router-dom';
 import Home from './components/Home';
@@ -6,8 +5,6 @@ import Vision from './components/Vision';
 import Guests from './components/Guests';
 import Formalities from './components/Formalities';
 import Weddingparty from './components/Weddingparty';
-import './firebase';
-
 
 const Layout = () => {
   return (
@@ -29,7 +26,6 @@ const Layout = () => {
 const App = () => {
   return (
     <>
-    <header className='pageHeader'>
       <HashRouter>
             <Routes>
                 <Route element={<Layout/>}>
@@ -41,11 +37,11 @@ const App = () => {
                 </Route>
             </Routes>
       </HashRouter>
-    </header>
 
-    <footer>
-      <span>© 2023 Wedding Organizer</span>
-    </footer>
+
+      <footer>
+        <span>© 2023 Wedding Organizer</span>
+      </footer>
     </>
   )
 }

@@ -1,9 +1,6 @@
-import React from "react";
 import { useEffect, useState } from 'react'
 import { collection, getDocs } from "firebase/firestore";
 import { db } from '../firebase';
-import testPhoto from '../assets/img01.jpg'
-import { faIndianRupeeSign } from "@fortawesome/free-solid-svg-icons";
 
 const Vision = () => {
     const [styles, setStyles] = useState([]);
@@ -67,27 +64,12 @@ const Vision = () => {
 export default Vision
 
 /*
-{styles.map(({theme, characteristics, mainColors, decorations, additionalColors}) => (
-                <div>
-                    <h3>{theme}</h3>
-                    <p>Characteristic: {characteristics}</p>
-                    <p>Primary colors: {mainColors}</p>
-                    <p>Another colors: {additionalColors}</p>
-                    <p>Decorations: {decorations}</p>
-                </div>))
-            }
+import testPhoto from '../assets/img01.jpg'
+import { faIndianRupeeSign } from "@fortawesome/free-solid-svg-icons";
 
 <img src={testPhoto} alt='Test Photo'/>
 */
 
-/*
-<p>Primary colors:</p>
-                    {mainColors}
-                    <p>Another colors:</p>
-                    {additionalColors}
-                    <p>Decorations:</p>
-                    {decorations}
-*/
 
 /*
 <section className="wedding-date">

@@ -15,6 +15,4 @@ dist/
 
 .css
 .lh
-.vite.config.js
 .json
-firebase.js
