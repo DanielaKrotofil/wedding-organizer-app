@@ -29,19 +29,13 @@
         border: none;
         background-color: $color-green-basic;
         color: $color-beige;
-        cursor: pointer;
         padding: 1em 2em;
         width: 100%;
         text-align: center;
-
-        :hover {
-            background-color: $color-dark-grey;
-        }
     }
 
     &__inspirations {
         display: flex;
-        
         text-align: center;
         flex-direction: column;
         gap: 0.1em;
