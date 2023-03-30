@@ -120,24 +120,3 @@ const VisionStyles = () => {
 }
 
 export default VisionStyles
-
-
-/*
-<div className="wedding-styles__elements-single" key={theme}>
-                    <p>{theme}</p>
-                    <WeddingStylesLists characteristic={characteristics} color1={mainColors} color2={additionalColors} decoration={decorations}/>
-                </div>))
-
-LISTS
-
-return (<>
-        <p>Characteristic:</p>
-        {props.characteristic.map((el, index) => {return <li key={index}> {el}</li>})}
-        <p>Primary colors:</p>
-        {props.color1.map((el, index) => {return <li key={index}> {el}</li>})}
-        <p>Another colors:</p>
-        {props.color2.map((el, index) => {return <li key={index}> {el}</li>})}
-        <p>Decorations:</p>
-        {props.decoration.map((el, index) => {return <li key={index}> {el}</li>})}
-        </>)
-*/
