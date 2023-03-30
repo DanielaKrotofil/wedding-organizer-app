@@ -1,5 +1,7 @@
 @import '../settings/variables';
 
+
+
 .wedding-styles {
     
 
@@ -39,14 +41,31 @@
 
     &__inspirations {
         display: flex;
-        align-items: center;
+        
+        text-align: center;
         flex-direction: column;
         gap: 0.1em;
 
-        &-buttons {
+        &__view {
             padding: 1em;
             display: flex;
             gap: 2em;
+            flex-wrap: wrap;
+
+            &-box {
+                display: flex;
+                flex-direction: column;
+
+                h3 {
+                    font-family: $font-family-freehand;
+                    margin-bottom: 0.3rem;
+                    font-weight: 700
+                }
+                img {
+                    max-width: 22rem;
+                    height: 28rem;
+                }
+            }
         }
     }
 }
