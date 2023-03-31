@@ -121,7 +121,7 @@ const VisionStyles = () => {
 export default VisionStyles
 
 export const SelectStyle = () => {
-    const [weddingstyle, setWeddingStyle] = useState ('');
+    const [weddingstyle, setWeddingStyle] = useState ('not chosen');
 
     const updateStyle = ({target}) => {
         setWeddingStyle(target.vale)
@@ -132,7 +132,7 @@ export const SelectStyle = () => {
                     <p>Please select your wedding style*</p>
                     <select value={weddingstyle} onChange={updateStyle} id="wedding-style">
                         {view.map((view, id) => {
-                            return <option key={id}>{view.title}</option>
+                            return <option key={id} value={view.title}>{view.title}</option>
                         })}
                     </select>
             </span>

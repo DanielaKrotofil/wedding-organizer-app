@@ -1,7 +1,7 @@
 import {useState} from "react";
 
 const WeddingDate = () => {
-    const [weddingdate, setWeddingDate] = useState ('');
+    const [weddingdate, setWeddingDate] = useState ('not chosen');
 
     const updateDate = ({target}) => {
         setWeddingDate(target.value)
