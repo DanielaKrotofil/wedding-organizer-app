@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 11,
+            "activePatchIndex": 12,
             "patches": [
                 {
                     "date": 1679610980897,
@@ -52,6 +52,10 @@
                 {
                     "date": 1680251090426,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n @import './settings/variables';\r\n @import './elements/navigation';\r\n @import './elements/landingpage';\r\n @import './elements/weddingstyles';\r\n-@import './elements/weddingdate';\r\n+@import './elements/vision';\r\n @import './elements/buttons';\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680282787648,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,6 @@\n @import './elements/navigation';\r\n @import './elements/landingpage';\r\n @import './elements/weddingstyles';\r\n @import './elements/vision';\r\n-@import './elements/buttons';\n\\ No newline at end of file\n+@import './elements/buttons';\r\n+@import './elements/todolist';\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1679610980897,

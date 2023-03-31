@@ -1,0 +1,104 @@
+@import '../settings/variables';
+
+.toDoList {
+    width: 70%;
+    margin: 3em auto;
+    border-radius: 1em;
+    box-shadow: 0 0.5em 1em 0.12em $color-dark-grey;
+
+    input {
+        border: none;
+        width: 75%;
+        padding: 0.6em;
+        float: left;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            cursor: pointer;
+            position: relative;
+            padding: 1.2em 0.8em 0.7em 3em;
+            background: $color-white;
+            transition: 0.2s;
+            font-size: 1.3em;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+
+            &:last-child {
+                border-bottom-left-radius: 0.75em;
+                border-bottom-right-radius: 0.75em;
+            }
+
+            &:nth-child(odd) {
+                background: $color-beige;
+            }
+
+            /* Darker background-color on hover */
+            &:hover {
+                background: $color-dark-grey;
+            }
+
+            &.done {
+                background: $color-green-basic;
+                color: $color-white;
+                text-decoration: line-through;
+
+                /* Add a "checked" mark when clicked on */
+                &::before {
+                    content: "";
+                    position: absolute;
+                    border-color: $color-white;
+                    border-style: solid;
+                    border-width: 0 0.15em 0.15em 0;
+                    left: 16px;
+                    transform: rotate(45deg);
+                    height: 15px;
+                    width: 7px;
+                }
+            }
+        }
+    }
+  }
+
+
+  /* Style the header */
+  .toDoList .header {
+    background-color: $color-green-basic;
+    padding: 30px 40px;
+    color: $color-white;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    /* Clear floats after the header */
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+  }
+
+
+  /* Style the "Add" button */
+  .toDoList .btn-add {
+    padding: 0.7em;
+    width: 25%;
+    background: $color-beige;
+    color: $color-green-basic;
+    float: left;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 0;
+
+    &:hover {
+        background-color: $color-dark-grey;
+      }
+}
