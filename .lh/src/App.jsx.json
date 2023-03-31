@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 217,
+            "activePatchIndex": 223,
             "patches": [
                 {
                     "date": 1679610917987,
@@ -876,6 +876,30 @@
                 {
                     "date": 1679851413710,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,8 @@\n import Guests from './components/Guests';\n import Formalities from './components/Formalities';\n import Weddingparty from './components/Weddingparty';\n \n-\n-\n const Layout = () => {\n   return (\n       <>\n           <nav className='nav'>\n"
+                },
+                {
+                    "date": 1680248187416,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n import Vision from './components/Vision';\n import Guests from './components/Guests';\n import Formalities from './components/Formalities';\n import Weddingparty from './components/Weddingparty';\n+import WeddingDate from './components/Weddingdate';\n \n const Layout = () => {\n   return (\n       <>\n"
+                },
+                {
+                    "date": 1680248272830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,11 @@\n \n const App = () => {\n   return (\n     <>\n+    <div>\n+      <p>Wedding Date:</p>\n+    </div>\n       <HashRouter>\n             <Routes>\n                 <Route element={<Layout/>}>\n                     <Route path='/' element={<Home/>}/>\n"
+                },
+                {
+                    "date": 1680248327023,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,8 +28,9 @@\n   return (\n     <>\n     <div>\n       <p>Wedding Date:</p>\n+      <span></span>\n     </div>\n       <HashRouter>\n             <Routes>\n                 <Route element={<Layout/>}>\n"
+                },
+                {
+                    "date": 1680248363781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n   return (\n     <>\n     <div>\n       <p>Wedding Date:</p>\n-      <span></span>\n+      <span>${weddingdate}</span>\n     </div>\n       <HashRouter>\n             <Routes>\n                 <Route element={<Layout/>}>\n"
+                },
+                {
+                    "date": 1680248398892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n   return (\n     <>\n     <div>\n       <p>Wedding Date:</p>\n-      <span>${weddingdate}</span>\n+      <span></span>\n     </div>\n       <HashRouter>\n             <Routes>\n                 <Route element={<Layout/>}>\n"
+                },
+                {
+                    "date": 1680248596095,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,8 @@\n import Vision from './components/Vision';\n import Guests from './components/Guests';\n import Formalities from './components/Formalities';\n import Weddingparty from './components/Weddingparty';\n-import WeddingDate from './components/Weddingdate';\n \n const Layout = () => {\n   return (\n       <>\n@@ -26,12 +25,8 @@\n \n const App = () => {\n   return (\n     <>\n-    <div>\n-      <p>Wedding Date:</p>\n-      <span></span>\n-    </div>\n       <HashRouter>\n             <Routes>\n                 <Route element={<Layout/>}>\n                     <Route path='/' element={<Home/>}/>\n"
                 }
             ],
             "date": 1679610917987,

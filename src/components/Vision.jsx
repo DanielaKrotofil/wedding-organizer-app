@@ -6,7 +6,7 @@ const Vision = () => {
     return <>
     <section className="container">
         <h1>Your Vision</h1>
-        <section className="wedding-date">
+        <section className="wedding-vision">
             <WeddingDate/>
         </section>
         <section className="wedding-priorities">

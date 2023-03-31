@@ -1,0 +1,23 @@
+@import '../settings/variables';
+
+.wedding-date-selection {
+    display: flex;
+    justify-content: space-around;
+    margin: 3rem 0;
+    font-family: $font-family-freehand;
+
+    h2 {
+        font-weight: 900;
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+
+        p {
+            color: $color-dark-grey;
+            font-weight: 600;
+        }
+    }
+}
