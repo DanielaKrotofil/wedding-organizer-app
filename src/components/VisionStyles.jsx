@@ -47,18 +47,18 @@ const view = [
     },
 ];
 
-const VisionStyles = () => {
 
+const VisionStyles = () => {
     const [styles, setStyles] = useState([]);
 
     useEffect(() => {
         getDocs(collection(db, "styles")).then((querySnapshot) => {
-        const tempArr = [];
-        querySnapshot.forEach((doc) => {
-            tempArr.push(doc.data());
-       })
+            const tempArr = [];
+            querySnapshot.forEach((doc) => {
+                tempArr.push(doc.data());
+            })
 
-        setStyles(tempArr);
+            setStyles(tempArr);
         });
     }, [])
 
@@ -109,7 +109,7 @@ const VisionStyles = () => {
     return (
         <>
         <section className="wedding-styles">
-            <h2>Wedding Styles</h2>
+            <h2>Wedding Styles - hints</h2>
             <div className="wedding-styles__elements">
                 <WeddingStyles styles={styles}/>
             </div>
@@ -118,5 +118,26 @@ const VisionStyles = () => {
         </>
     )
 }
-
 export default VisionStyles
+
+export const SelectStyle = () => {
+    const [weddingstyle, setWeddingStyle] = useState ('');
+
+    const updateStyle = ({target}) => {
+        setWeddingStyle(target.vale)
+    }
+    return (<>
+        <div className="wedding-vision-selection">
+            <span className="wedding-vision-selection__main">
+                    <p>Please select your wedding style*</p>
+                    <select value={weddingstyle} onChange={updateStyle} id="wedding-style">
+                        {view.map((view, id) => {
+                            return <option key={id}>{view.title}</option>
+                        })}
+                    </select>
+            </span>
+            <h2>{`Style of your wedding: ${weddingstyle}`}</h2>
+        </div>
+        <small>*If you need help choosing, there are hints at the bottom of the page</small>
+    </>)
+}

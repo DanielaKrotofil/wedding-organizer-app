@@ -4,11 +4,6 @@
 
 .wedding-styles {
 
-    h2 {
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-
     &__elements {
         display: flex;
         gap: 0.1em;
@@ -51,7 +46,6 @@
 
                 h3 {
                     font-family: $font-family-freehand;
-                    margin-bottom: 0.3rem;
                     font-weight: 700
                 }
                 img {

@@ -8,13 +8,13 @@ const WeddingDate = () => {
     }
 
     return (
-        <section className="wedding-date-selection">
-            <div className="wedding-date-selection__main">
+        <div className="wedding-vision-selection">
+            <span className="wedding-vision-selection__main">
                 <p>Please select your wedding date</p>
                 <input value={weddingdate} onChange={updateDate} type='date' id="wedding-date"/>
-            </div>
+            </span>
             <h2>{`Your date : ${weddingdate}`}</h2>
-        </section>
+        </div>
     )
 }
 
