@@ -8,7 +8,6 @@ const Formalities = () => {
     return (<section className="formalities container">
         <h1>Formalities</h1>
         <WeddingCeremony/>
-        <CeremonyTips/>
         <FormalitiesList/>
         <FormalitiesTips/>
     </section>)

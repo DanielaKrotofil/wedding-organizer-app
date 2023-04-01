@@ -24,7 +24,7 @@ const WeddingCeremony = () => {
     return (<div className="formalities__select">
                 <form>
                     <fieldset>
-                        <legend>What is the nature of your marriage ceremony?</legend>
+                        <legend>What is the nature of your marriage ceremony? *</legend>
                         {ceremonies.map((ceremonies, id) => {
                             return <label key={id} className="checkbox">
                                         <input type="radio" name='ceremonies' value={ceremonies.name}/>
@@ -36,6 +36,7 @@ const WeddingCeremony = () => {
                             )
                         }
                     </fieldset>
+                    <small>*If you need help choosing, there are hints at the bottom of the page</small>
                 </form>
 
                 <div className="formalities__notes">
