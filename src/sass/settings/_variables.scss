@@ -38,4 +38,34 @@ body {
         max-width: 1200px;
         padding-top: 1rem;
     }
+
+    .checkbox {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        font-size: 1.4em;
+        font-weight: 600;
+        font-family: $font-family-freehand;
+
+        input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        span {
+            border-radius: 50%;
+            border: 0.2em solid $color-green-basic;
+            height: 1em;
+            flex-shrink: 0;
+            flex-basis: 1em;
+            margin-right: 0.2em;
+            margin-bottom: 0.1em;
+        }
+        input:checked + span {
+            background-color: $color-green-basic;
+        }
+    }
 }
