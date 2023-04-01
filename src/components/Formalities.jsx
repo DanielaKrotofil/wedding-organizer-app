@@ -1,7 +1,7 @@
 import FormalitiesList from "./FormalitiesTasks"
 import FormalitiesTips from "./FormalitiesTips"
 import WeddingCeremony from "./FormalitiesWeddingCeremony"
-import { CeremonyTips } from "./FormalitiesTips"
+
 
 
 const Formalities = () => {
