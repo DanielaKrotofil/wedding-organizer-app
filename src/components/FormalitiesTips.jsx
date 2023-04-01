@@ -1,9 +1,14 @@
 import { collection, getDocs } from "firebase/firestore";
 import { db } from '../firebase';
+import { useEffect, useState } from 'react'
+
+
+
 
 export const CeremonyTips = () => {
+
     return (<>
-    <h3>some facts about each of them:</h3>
+    <h3>Some facts about each of them:</h3>
     </>)
 }
 
@@ -13,3 +18,7 @@ const FormalitiesTips = () => {
     </>)
 }
 export default FormalitiesTips
+
+/*
+
+*/

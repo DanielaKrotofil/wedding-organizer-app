@@ -37,6 +37,24 @@ const WeddingCeremony = () => {
                         }
                     </fieldset>
                 </form>
+
+                <div className="formalities__notes">
+                    <form >
+                        <label for="placeceremony">Place of wedding</label>
+                        <textarea rows="5" type="text" id="placeceremony" placeholder="Example: Elevation Church 11416 E Independence Blvd
+Suite N, Matthews, NC, 28105" />
+                    </form>
+
+                    <form >
+                        <label>Person to contact</label>
+                        <textarea />
+                    </form>
+
+                    <form >
+                        <label>Notes / other arrangements</label>
+                        <textarea rows="15" cols="70"/>
+                    </form>
+                </div>
         </div>
     )
 
