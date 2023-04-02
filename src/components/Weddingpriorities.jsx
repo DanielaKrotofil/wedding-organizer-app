@@ -3,16 +3,7 @@ import {useState} from "react";
 const WeddingPrio = () => {
 
     const OurPriorities = () => {
-        const [prioList, setPrioList] = useState([
-            {
-                id: 1,
-                name: "flowers",
-            },
-            {
-                id: 2,
-                name: "photographer",
-            }
-        ]);
+        const [prioList, setPrioList] = useState([]);
 
         const [inputValue, setInputValue] = useState('');
         const updateInputValue = ({target}) => setInputValue(target.value)
@@ -45,17 +36,9 @@ const WeddingPrio = () => {
                 </div>
         </div>)
     };
+
     const OurnNotpriorities = () => {
-        const [notprioList, setNotPrioList] = useState([
-            {
-                id: 1,
-                name: "helmet",
-            },
-            {
-                id: 2,
-                name: "wizard",
-            }
-        ]);
+        const [notprioList, setNotPrioList] = useState([]);
         const [inputValue, setInputValue] = useState('');
         const updateInputValue = ({target}) => setInputValue(target.value)
 
