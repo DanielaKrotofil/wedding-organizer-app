@@ -1,16 +1,17 @@
 @import '../settings/variables';
 
 .toDoList {
-    width: 70%;
-    margin: 3em auto;
-    border-radius: 1em;
+    width: 100%;
+    margin: 2rem auto;
+    border-radius: 1rem;
     box-shadow: 0 0.5em 1em 0.12em $color-dark-grey;
 
     input {
         border: none;
         width: 75%;
-        padding: 0.6em;
+        padding: 10px;
         float: left;
+        font-size: 16px;
     }
 
     ul {
@@ -21,14 +22,15 @@
         li {
             cursor: pointer;
             position: relative;
-            padding: 1.2em 0.8em 0.7em 3em;
-            background: $color-white;
+            padding: 12px 8px 12px 40px;
+            background: $color-light-grey;
+            font-size: 18px;
             transition: 0.2s;
-            font-size: 1.3em;
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
+
 
             &:last-child {
                 border-bottom-left-radius: 0.75em;
@@ -36,16 +38,16 @@
             }
 
             &:nth-child(odd) {
-                background: $color-beige;
+                background: $color-white;
             }
 
             /* Darker background-color on hover */
             &:hover {
-                background: $color-dark-grey;
+                background: $color-light-grey;
             }
 
             &.done {
-                background: $color-green-basic;
+                background: $color-light-grey;
                 color: $color-white;
                 text-decoration: line-through;
 
@@ -89,7 +91,7 @@
   .toDoList .btn-add {
     padding: 0.7em;
     width: 25%;
-    background: $color-beige;
+    background: $color-light-grey;
     color: $color-green-basic;
     float: left;
     text-align: center;

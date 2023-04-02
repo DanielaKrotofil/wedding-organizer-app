@@ -20,8 +20,8 @@ const WeddingPrio = () => {
         }
 
         return (<div className="wedding-priorities__selection-part">
-                <div className="prioritiesList">
-                    <form className="prioritiesList__header" onSubmit={addNewPrio}>
+                <div className="toDoList">
+                    <form className="header" onSubmit={addNewPrio}>
                         <h2>Your priorities</h2>
                         <p>Our priorities, i.e. what we care about the most</p>
                         <input value={inputValue} onChange={updateInputValue} type="text" placeholder="example: car"/>
@@ -54,8 +54,8 @@ const WeddingPrio = () => {
         }
 
         return (<div className="wedding-priorities__selection-part">
-                <div className="prioritiesList">
-                    <form className="prioritiesList__header" onSubmit={addNewPrio}>
+                <div className="toDoList">
+                    <form className="header" onSubmit={addNewPrio}>
                         <h2>Not priorities</h2>
                         <p>What is not so important to us, so we can save money</p>
                         <input value={inputValue} onChange={updateInputValue} type="text" placeholder="example: cats in wigs"/>
