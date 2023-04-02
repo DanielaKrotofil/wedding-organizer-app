@@ -1,8 +1,12 @@
-import React from "react";
 
+import { PartyTips } from './WeddingPartTips';
 
 const Weddingparty = () => {
-    return <h1>Wedding Party</h1>
+
+    return <section className="container">
+        <h1>Wedding Party</h1>
+        <PartyTips/>
+    </section>
 }
 
 export default Weddingparty

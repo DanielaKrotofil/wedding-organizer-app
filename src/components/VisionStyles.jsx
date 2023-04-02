@@ -139,5 +139,5 @@ export const SelectStyle = () => {
             <h2>{`Style of your wedding: ${weddingstyle}`}</h2>
         </div>
         <small>*If you need help choosing, there are hints at the bottom of the page</small>
-        </>)
+    </>)
 }
