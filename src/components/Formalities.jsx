@@ -1,6 +1,6 @@
 import FormalitiesList from "./FormalitiesTasks"
 import FormalitiesTips from "./FormalitiesTips"
-import WeddingCeremony from "./FormalitiesWeddingCeremony"
+import WeddingCeremony from "./FormalitiesSelection"
 
 const Formalities = () => {
     return (<section className="formalities container">
