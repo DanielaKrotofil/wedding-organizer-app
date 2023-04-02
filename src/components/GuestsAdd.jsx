@@ -1,17 +1,23 @@
 import React, { useState } from "react";
+import { formatPostcssSourceMap } from "vite";
 
 const GuestsAdd = () => {
     const [form, setForm] = useState({ name: "", phone: '', address: '' });
+    const [counter, setCounter] = useState(0);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         setForm((prevState) => {
-        return {
-            ...prevState,
-            [name]: value,
-        };
+            return {
+                ...prevState,
+                [name]: value,
+            };
         });
     };
+
+    const handleClick = () => {
+        setCounter(prevState => prevState + 1);
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -20,7 +26,8 @@ const GuestsAdd = () => {
 
     return (
         <div className="toDoList">
-            <form onSubmit={handleSubmit} className="header guests-form">
+            <form onSubmit={handleSubmit} onClick={handleClick} className="header guests-form">
+            <p className="guests-counter">Count of guestes: {counter}</p>
             <h2>Add Guest</h2>
                 <label className="guests-textreas">
                     <div>

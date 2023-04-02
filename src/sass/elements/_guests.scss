@@ -1,4 +1,9 @@
 .guests {
+    &-counter {
+        font-family: $font-family-freehand;
+        display: flex;
+        align-self: flex-end;
+    }
     &-form {
         display: flex;
         justify-content: center;
