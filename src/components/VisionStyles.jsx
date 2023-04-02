@@ -124,6 +124,27 @@ export const SelectStyle = () => {
     const [weddingstyle, setWeddingStyle] = useState ('not chosen');
 
     const updateStyle = ({target}) => {
+        setWeddingStyle(target.value)
+    }
+    return (<>
+        <div className="wedding-vision-selection">
+            <span className="wedding-vision-selection__main">
+                    <p>Please select your wedding style*</p>
+                    <select value={weddingstyle} onChange={updateStyle} id="wedding-style">
+                        {view.map((view, id) => {
+                            return <option key={id} value={view.title}>{view.title}</option>
+                        })}
+                    </select>
+            </span>
+            <h2>{`Style of your wedding: ${weddingstyle}`}</h2>
+        </div>
+        <small>*If you need help choosing, there are hints at the bottom of the page</small>
+        </>)
+}
+/*
+ const [weddingstyle, setWeddingStyle] = useState ('not chosen');
+
+    const updateStyle = ({target}) => {
         setWeddingStyle(target.vale)
     }
     return (<>
@@ -139,5 +160,5 @@ export const SelectStyle = () => {
             <h2>{`Style of your wedding: ${weddingstyle}`}</h2>
         </div>
         <small>*If you need help choosing, there are hints at the bottom of the page</small>
-    </>)
-}
+        </>)
+*/
