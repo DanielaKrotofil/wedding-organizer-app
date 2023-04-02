@@ -1,43 +1,53 @@
+@import '../settings/variables';
+.weddingparty {
+    line-height: 1.56em;
 
-.table {
-    &__layout {
-        margin-top: 3em;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        &-text {
-            margin: 1em 0;
-            text-align: center;
-        }
-
-        img {
-            width: 40%;
-        }
+    h3, p {
+        text-align: center;
     }
-    &__plates {
-        display: flex;
-        gap: 1em;
 
-        .box {
+    &__halls {
+        margin-top: 3em;
+
+
+    }
+    &__tips {
+        margin-top: 3em;
+        &__arrangement {
             display: flex;
             flex-direction: column;
-            gap: 1em;
             align-items: center;
-            margin: 3em 0;
-
-            &-text {
-                font-family: $font-family-freehand;
-                font-size: 1.5em;
-                text-align: center;
-
-                p {
-                    font-weight: 600;
-                }
+            img {
+                width: 40%;
             }
 
-            img {
-                width: 90%;
+            
+        }
+
+        &__tablesetting {
+            display: flex;
+            gap: 1em;
+
+            &__box {
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+                align-items: center;
+                margin: 3em 0;
+
+                &-text {
+                    font-family: $font-family-freehand;
+                    font-size: 1.5em;
+                    text-align: center;
+
+                    p {
+                        font-weight: 600;
+                    }
+                }
+
+                img {
+                    width: 90%;
+                }
             }
         }
     }

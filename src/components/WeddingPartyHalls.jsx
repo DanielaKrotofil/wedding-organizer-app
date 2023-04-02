@@ -2,7 +2,7 @@ import { halls } from "../data/halls"
 
 const WeddingHals = () => {
     const arr1 = ['person to contact', 'phone', 'e-mial']
-    const arr2 = ['website', 'the distance of the wedding hall from the wedding venue', 'menu offer',  'guests: min./max','cost per guest with service details', 'accommodation offer', 'air conditioning', 'wedding hours']
+    const arr2 = ['website', 'The distance of the wedding hall from the wedding venue', 'Menu offer',  'Guests: min./max','Cost per guest with service details', 'Accommodation offer', 'Air conditioning', 'Wedding hours and cost an extra hours']
     const arr3 = ['Does it offer extras: country/cheese/marine table, etc. and at what price', 'Additional fees (bottle opening, decorations, etc.)','Payment for damages',  'Can you have your own attractions (sweet table, photo booth, bartender)', 'Whether the ZAIKS license is purchased?']
 
     const contact = [];
@@ -20,17 +20,19 @@ const WeddingHals = () => {
         extras.push(<tr>{index+1}. {data}</tr>)
     })
 
-    return (<>
+    return (<div className="weddingparty__halls">
     <h3>Wedding Halls</h3>
 
     <div>
-        <p>What is important to find the best hall?</p>
-        <p>Visit several halls and take notes from up to 4 rooms that impressed you the most.</p>
+        <span>
+            <p>What is important to find the best hall?</p>
+            <p>Visit several halls and take notes from up to 4 rooms that impressed you the most.</p>
+        </span>
 
         <table className="table">
             <tbody>
                 <tr>
-                    <th colspan="3">Information you need to check about 1 place</th>
+                    <th colspan="3">Information you need to check about each place</th>
                 </tr>
                 <tr>
                     <th>Contact</th>
@@ -45,6 +47,6 @@ const WeddingHals = () => {
             </tbody>
         </table>
     </div>
-    </>)
+    </div>)
 }
 export default WeddingHals
