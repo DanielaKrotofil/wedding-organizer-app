@@ -75,4 +75,20 @@ body {
             background-color: $color-green-basic;
         }
     }
+
+    table {
+        border: 0.1em solid $color-green-basic;
+        th {
+            padding-top: 12px;
+            background-color: $color-green-basic;
+            color: $color-white;
+            padding: 0.5em;
+            font-size: 1.1em;
+        }
+        td {
+            border: 0.1em solid $color-green-basic;
+            line-height: 1.56em;
+            padding: 1em;
+        }
+    }
 }

@@ -7,7 +7,6 @@ import rustimg from '../assets/rustic/rust01.jpg';
 import greenimg from '../assets/greenery/gree05.jpg';
 import classicimg from '../assets/traditional/trad07.jpg';
 import shabbyimg from '../assets/shabby chic/shc05.jpg';
-
 const view = [
     {
         id: 1,
