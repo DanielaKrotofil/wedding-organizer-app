@@ -1,0 +1,29 @@
+.guests {
+    &-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    &-textreas {
+        display: flex;
+        justify-content: space-around;
+        gap: 1em;
+        padding: 1em 0;
+
+        textarea::placeholder {
+            font-style: italic;
+            color: $color-green-basic;
+            padding: 0.2em;
+        }
+    }
+
+    input {
+        width: 50%;
+        border-radius: 0.8em;
+
+        &:focus {
+            border: 0.09em solid $color-dark-grey;
+        }
+    }
+}

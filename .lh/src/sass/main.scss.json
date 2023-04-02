@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 16,
+            "activePatchIndex": 17,
             "patches": [
                 {
                     "date": 1679610980897,
@@ -72,6 +72,10 @@
                 {
                     "date": 1680417239893,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,5 +6,4 @@\n @import './elements/vision';\r\n @import './elements/buttons';\r\n @import './elements/todolist';\r\n @import './elements/formalities';\r\n-@import './elements/cardlist';\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680423653508,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,4 +6,5 @@\n @import './elements/vision';\r\n @import './elements/buttons';\r\n @import './elements/todolist';\r\n @import './elements/formalities';\r\n+@import './elements/guests';\r\n"
                 }
             ],
             "date": 1679610980897,
