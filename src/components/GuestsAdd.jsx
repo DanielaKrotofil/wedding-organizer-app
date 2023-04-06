@@ -1,50 +1,72 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const GuestsAdd = () => {
     const [counter, setCounter] = useState(0);
     const handleClick = () => {
         setCounter(prevState => prevState + 1);
     }
-    const [formula, setFormula] = useState({ name: "", phone: '', address: '' });
 
+    const GuestNameSurname = () => {
+        return (<>
+        <div>
+            <label for="name">Name</label>
+            <input></input>
+        </div>
+        <div>
+            <label for="surname">Surname</label>
+            <input></input>
+        </div>
+        </>)
+    }
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormula((prevState) => {
-            return {
-                ...prevState,
-                [name]: value,
-            };
-        });
-    };
+    const GuestPhone = () => {
+        return (<>
+        <div>
+            <label for="Phone">Phone</label>
+            <input type="number" name="phone"/>
+        </div>
+        </>)
+    }
+    const GuestEmail = () => {
+        return (<>
+        <div>
+            <label for="email">e-mail</label>
+            <input type="text" name="email"/>
+        </div>
+        </>)
+    }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const GuestAddress = () => {
+        return (<>
+        <div>
+            <label for="address">address</label>
+            <input type="text" name="address"/>
+        </div>
+        </>)
+    }
 
-    };
+    const SubmitBtn = () => {
+        return (<>
+        <button onClick={handleClick}>Add Guest</button>
+        </>)
+    }
 
     return (<>
-    <div className="toDoList">
-            <form onSubmit={handleSubmit} onClick={handleClick} className="header guests-form">
-            <p className="guests-counter">Count of guestes: {counter}</p>
-            <h2>Add Guest</h2>
-                <label className="guests-textreas">
-                    <div>
-                        <label htmlFor="name">Name of guest</label>
-                        <textarea cols="40" type="text" name="name" value={formula.name} onChange={handleChange} placeholder="Name and surname"/>
-                    </div>
-                    <div>
-                        <label htmlFor="phone">Number of guest</label>
-                        <textarea cols="40" type="number" name="phone" value={formula.phone} onChange={handleChange} placeholder="Phone" />
-                    </div>
-                    <div>
-                        <label htmlFor="address">Address of guest</label>
-                        <textarea cols="40" type="text" name="address" value={formula.address} onChange={handleChange} placeholder="Address"/>
-                    </div>
-                </label>
-                <input type="submit" value="Add to list" />
-            </form>
+    <div className="container">
+        <div className="guestcard">
+            <h1>Your guests</h1>
+            <p className="guestcard-counter">Count of guestes: {counter}</p>
+            <div className="guestcard__body">
+                <form>
+                    <GuestNameSurname/>
+                    <GuestAddress/>
+                    <GuestPhone/>
+                    <GuestEmail/>
+                    <SubmitBtn/>
+                </form>
+            </div>
         </div>
-    </>);
+    </div>
+    </>)
 }
 export default GuestsAdd
