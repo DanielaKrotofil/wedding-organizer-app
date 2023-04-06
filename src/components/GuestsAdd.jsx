@@ -15,7 +15,7 @@ const GuestsAdd = () => {
         if (form.surname.length <2) localErrors.push('too short surname');
         if (form.address.length <2) localErrors.push('add address');
         if (form.phone.length <5) localErrors.push('add phone');
-        if (!form.email.includes('@')) localErrors.push(' enter email or "@none" ')
+        if (!form.email.includes('@')) localErrors.push(' enter email or "xx@xx.com" ')
 
         if (localErrors.length > 0) {
             setErrors(localErrors)
@@ -24,23 +24,23 @@ const GuestsAdd = () => {
         }
 
         setForm((prevState) => {
-        return {
-            ...prevState,
-            id: prevState.length + 1,
-            [name]: value,
-            [surname]: value,
-            [address]: value,
-            [phone]: value,
-            [email]: value,
-        };
+            return {
+                ...prevState,
+                id: prevState.length + 1,
+                [name]: value,
+                [surname]: value,
+                [address]: value,
+                [phone]: value,
+                [email]: value,
+            };
         });
     };
 
     return ( <section className="container">
-
+        <p className="guestcard-counter">Count of guestes: {counter}</p>
         <div className="guestcard">
-            <p className="guestcard-counter">Count of guestes: {counter}</p>
-            <div className="guestcard__body">
+            <div className=" guestcard-body guestcard__form">
+                <h3>Enter guest details</h3>
                 <form onSubmit={handleChange}>
                     <label >Name</label>
                     <input type="text" name="name" value={form.name} onChange={handleChange} />
@@ -55,6 +55,11 @@ const GuestsAdd = () => {
                     <button className="btn" type="submit" value='submit'>Add Guest</button>
                     <p className="alert">{errors.join(' | ')}</p>
                 </form>
+            </div>
+            <div className="guestcard-body guestcard__list">
+                <ul>
+                    <li></li>
+                </ul>
             </div>
         </div>
     </section>);
