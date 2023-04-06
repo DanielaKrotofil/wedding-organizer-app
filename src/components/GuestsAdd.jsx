@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const GuestsAdd = () => {
-    const [form, setForm] = useState({ name: '', surname: '', address: '', phone: '', email: '' });
+    const [formAdd, setFormAdd] = useState({ name: '', surname: '', address: '', phone: '', email: '' });
     const [errors, setErrors] = useState([]);
     const [counter, setCounter] = useState(0);
 
@@ -11,22 +11,16 @@ const GuestsAdd = () => {
         const { name, surname, address, phone, email, value } = e.target;
 
         const localErrors = [];
-        if (form.name.length <2) localErrors.push('too short name');
-        if (form.surname.length <2) localErrors.push('too short surname');
-        if (form.address.length <2) localErrors.push('add address');
-        if (form.phone.length <5) localErrors.push('add phone');
-        if (!form.email.includes('@')) localErrors.push(' enter email or "xx@xx.com" ')
+        if (formAdd.name.length <2) localErrors.push('too short name');
+        if (formAdd.surname.length <2) localErrors.push('too short surname');
+        if (formAdd.address.length <2) localErrors.push('add address');
+        if (formAdd.phone.length <5) localErrors.push('add phone');
+        if (!formAdd.email.includes('@')) localErrors.push(' enter email or "xx@xx.com" ')
 
-        if (localErrors.length > 0) {
-            setErrors(localErrors)
-        } else {
-            setCounter(prevState => prevState + 1);
-        }
-
-        setForm((prevState) => {
+        setFormAdd((prevState) => {
+            e.preventDefault();
             return {
                 ...prevState,
-                id: prevState.length + 1,
                 [name]: value,
                 [surname]: value,
                 [address]: value,
@@ -34,6 +28,12 @@ const GuestsAdd = () => {
                 [email]: value,
             };
         });
+
+        if (localErrors.length > 0) {
+            setErrors(localErrors)
+        } else {
+            setCounter(prevState => prevState + 1);
+        }
     };
 
     return ( <section className="container">
@@ -43,22 +43,22 @@ const GuestsAdd = () => {
                 <h3>Enter guest details</h3>
                 <form onSubmit={handleChange}>
                     <label >Name</label>
-                    <input type="text" name="name" value={form.name} onChange={handleChange} />
+                    <input type="text" name="name" value={formAdd.name} onChange={handleChange} />
                     <label >Surname</label>
-                    <input type="text" name="surname" value={form.surname} onChange={handleChange} />
+                    <input type="text" name="surname" value={formAdd.surname} onChange={handleChange} />
                     <label>Address</label>
-                    <input type="text" name="address" value={form.address} onChange={handleChange} />
+                    <input type="text" name="address" value={formAdd.address} onChange={handleChange} />
                     <label>Phone</label>
-                    <input type="number" name="phone" value={form.phone} onChange={handleChange} />
+                    <input type="number" name="phone" value={formAdd.phone} onChange={handleChange} />
                     <label >e-mail</label>
-                    <input type="email" name="email" value={form.email} onChange={handleChange} />
+                    <input type="email" name="email" value={formAdd.email} onChange={handleChange} />
                     <button className="btn" type="submit" value='submit'>Add Guest</button>
                     <p className="alert">{errors.join(' | ')}</p>
                 </form>
             </div>
             <div className="guestcard-body guestcard__list">
                 <ul>
-                    <li></li>
+                    <li>Guest: {formAdd.name} {formAdd.surname} | Address: {formAdd.address} | Contact: {formAdd.phone} {formAdd.email}</li>
                 </ul>
             </div>
         </div>
