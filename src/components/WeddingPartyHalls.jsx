@@ -21,10 +21,11 @@ const WeddingHals = () => {
 
             <div className="weddingparty__halls-examples">
             {halls.map(halls => <div key={halls.id} onClick={() => addHall(halls.id)}>
-                    <p>{halls.name}</p>
-                    <p>{halls.address}</p>
-                    <p>{halls.phone}</p>
-                    <p>{halls.web}</p>
+                    <a className="btn" href={halls.web}> {halls.name}</a>
+                    <ul>
+                        <li>{halls.address}</li>
+                        <li>{halls.phone}</li>
+                    </ul>
                 </div>)
             }
         </div>

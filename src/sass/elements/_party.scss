@@ -9,16 +9,30 @@
 
     &__halls {
         margin-top: 3em;
+
         &-examples {
+            margin: 1.5em;
             display: flex;
+            gap: 0.5em;
+
+            ul {
+                margin-top: 1em;
+
+                li {
+                    list-style: none;
+                    margin-left: 0.5em;
+                }
+            }
         }
     }
     &__tips {
         margin-top: 3em;
+
         &__arrangement {
             display: flex;
             flex-direction: column;
             align-items: center;
+
             img {
                 width: 40%;
             }
