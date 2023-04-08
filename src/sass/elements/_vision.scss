@@ -36,14 +36,6 @@
     gap: 1rem;
     margin: 3rem 0;
 
-    &__text {
-        color: $color-green-basic;
-        line-height: 1.5rem;
-        text-indent: 1rem;
-        text-align: justify;
-
-    }
-
     &__selection {
         display: flex;
         justify-content: space-around;

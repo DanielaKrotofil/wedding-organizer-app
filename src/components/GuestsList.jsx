@@ -65,7 +65,7 @@ const GuestsList = () => {
                         <input value={addressValue} onChange={updateAddress} type="text" placeholder="address"/>
                         <input value={emailValue} onChange={updateEmail} type="email" placeholder="e-mail"/>
                         <button className="btn-add" type='submit'>Add</button>
-                        <p className="alert">{alert.join(', ')}</p>
+                        <p className="guestcard__form-alert">{alert.join(', ')}</p>
                     </form>
             </div>
             <div className="guestcard-body guestcard__list">
