@@ -45,18 +45,25 @@
     &__list {
         background-color: $color-white;
         width: 65%;
-        padding: 1em 0;
-
-        li {
+        padding: 1em;
+        display: flex;
+        &-singleguest {
+            display: flex;
+            gap: 6em;
             padding: 1em;
+
             &:nth-child(even) {
                 background: $color-light-grey;
             }
         }
     }
 }
+
 .alert {
     color: $color-yellow;
     font-weight: bolder;
     text-transform: lowercase;
+}
+.line {
+    border-right: 0.13em double $color-light-grey;
 }
