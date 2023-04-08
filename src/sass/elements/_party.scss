@@ -2,12 +2,16 @@
 .weddingparty {
     line-height: 1.56em;
 
-    h3, p {
+    h3, h2, p {
         text-align: center;
+        padding-top: 1em;
     }
 
     &__halls {
         margin-top: 3em;
+        &-examples {
+            display: flex;
+        }
     }
     &__tips {
         margin-top: 3em;
@@ -29,7 +33,6 @@
                 flex-direction: column;
                 gap: 1em;
                 align-items: center;
-                margin: 3em 0;
 
                 &-text {
                     font-family: $font-family-freehand;
