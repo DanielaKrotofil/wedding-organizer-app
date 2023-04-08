@@ -17,11 +17,18 @@
         padding: 1em 2.5em;
         color: $color-white;
         text-align: center;
+        align-items: center;
+        justify-content: center;
         max-width: 35%;
+        max-height: 19em;
 
         h3 {
             font-family: $font-family-freehand;
             text-align: left;
+        }
+        &-alert {
+            font-weight: bolder;
+            text-transform: lowercase;
         }
 
         form {
@@ -47,6 +54,7 @@
         width: 65%;
         padding: 1em;
         display: flex;
+
         &-singleguest {
             display: flex;
             gap: 6em;
@@ -59,11 +67,7 @@
     }
 }
 
-.alert {
-    color: $color-yellow;
-    font-weight: bolder;
-    text-transform: lowercase;
-}
+
 .line {
     border-right: 0.13em double $color-light-grey;
 }
