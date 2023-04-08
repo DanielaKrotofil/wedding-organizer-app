@@ -74,8 +74,8 @@ const WeddingPrio = () => {
     return (
         <>
         <h2>Your priorities</h2>
-        <div className="wedding-priorities__text">
-            <p className="paragraph">At the very beginning of preparations for the wedding, it is worth determining what your priorities are, i.e. what is most important to you and you cannot imagine saving on it.
+        <div className="text">
+            <p className="text-paragraph">At the very beginning of preparations for the wedding, it is worth determining what your priorities are, i.e. what is most important to you and you cannot imagine saving on it.
     It's different for every couple. Some are able to pay for the best photographer, but they can give up flower decorations. For others, the wedding car will have to be great, but the wedding dress may be more modest. This can be counted indefinitely.</p>
             <p>So think about it together. If one thing seems very important to you and you can spend more money on it, find another that is less important to you so it may be a cheaper version</p>
         </div>
