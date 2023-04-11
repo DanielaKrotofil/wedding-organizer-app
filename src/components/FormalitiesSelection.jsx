@@ -1,4 +1,4 @@
-import { ceremonies } from "../data/ceremonies"
+import { ceremonies } from "../data/ceremoniesFormal"
 
 const WeddingCeremony = () => {
     return (<>

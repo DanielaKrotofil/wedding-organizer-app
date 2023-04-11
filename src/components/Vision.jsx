@@ -1,15 +1,14 @@
 import VisionStyles from "./VisionStyles"
-import { SelectStyle } from "./VisionStyles"
-import WeddingDate from "./Weddingdate"
+import { SelectStyle } from "./VisionSelection"
+import WeddingDate from "./VisionSelection"
 import WeddingPrio from "./Weddingpriorities"
 
 
 const Vision = () => {
-
     return <>
     <section className="container">
         <h1>Your Vision</h1>
-        <section className="wedding-vision">
+        <section className="central">
             <WeddingDate/>
             <SelectStyle/>
         </section>

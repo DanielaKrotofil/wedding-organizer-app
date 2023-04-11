@@ -1,37 +1,6 @@
 @import '../settings/variables';
 
-.wedding-vision {
-    font-family: $font-family-freehand;
-    margin: 3rem 13rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-
-    .wedding-vision-selection {
-        display: flex;
-        justify-content: space-between;
-
-        h2 {
-            font-weight: 900;
-        }
-
-        &__main {
-            display: flex;
-            flex-direction: column;
-            gap: 0.25rem;
-            font-size: 1.25rem;
-
-            p {
-                color: $color-dark-grey;
-                font-weight: 600;
-            }
-        }
-    }
-}
-
 .wedding-priorities {
-    display: flex;
-    flex-direction: column;
     line-height: 1.5rem;
     gap: 1rem;
     margin: 3rem 0;
@@ -43,6 +12,59 @@
         &-part {
             display: flex;
             flex-direction: column;
+        }
+    }
+}
+
+.wedding-styles {
+    display: flex;
+    gap: 0.1em;
+    line-height: 1.4em;
+    flex-wrap: wrap;
+
+    &__element{
+        color: $color-green-basic;
+        width: 30%;
+
+        p {
+            font-weight: 900;
+        }
+    }
+
+    .dropdown {
+        border: none;
+        background-color: $color-green-basic;
+        color: $color-beige;
+        padding: 1em 2em;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.vision__inspirations {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 0.1em;
+
+    &__view {
+        padding: 1em;
+        display: flex;
+        gap: 2em;
+        flex-wrap: wrap;
+
+        &-box {
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-family: $font-family-freehand;
+                font-weight: 700
+            }
+            img {
+                max-width: 22rem;
+                height: 28rem;
+            }
         }
     }
 }
