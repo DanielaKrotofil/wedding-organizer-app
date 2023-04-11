@@ -1,5 +1,10 @@
 @import '../settings/variables';
 
+.guests {
+    h1 {
+        margin-bottom: 0.5em;
+    }
+}
 .guestcard {
     display: flex;
     &-counter {
@@ -65,9 +70,4 @@
             }
         }
     }
-}
-
-
-.line {
-    border-right: 0.13em double $color-light-grey;
 }

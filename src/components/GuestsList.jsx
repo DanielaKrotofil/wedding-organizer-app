@@ -53,7 +53,7 @@ const GuestsList = () => {
 
         </>)
     }
-    return (<section className="container">
+    return (<section>
         <p className="guestcard-counter">Count of guestes: {guestList.length}</p>
         <div className="guestcard">
             <div className=" guestcard-body guestcard__form">
