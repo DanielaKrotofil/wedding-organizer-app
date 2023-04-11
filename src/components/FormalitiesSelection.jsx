@@ -1,31 +1,11 @@
+import { ceremonies } from "../data/ceremonies"
 
 const WeddingCeremony = () => {
-    const ceremonies = [
-        {
-            id: 1,
-            name: 'civil',
-        },
-        {
-            id: 2,
-            name: 'church',
-
-        },
-        {
-            id: 3,
-            name: 'concordat',
-        },
-        {
-            id: 4,
-            name: 'humanist',
-        },
-    ];
-
-
     return (<>
-        <div className="formalities__select">
+        <div className="formradio__select">
             <form>
                 <fieldset>
-                    <legend>What is the nature of your marriage ceremony? *</legend>
+                    <legend className="formradio__title">What is the nature of your marriage ceremony? *</legend>
                     {ceremonies.map((ceremonies, id) => {
                         return <label key={id} className="checkbox">
                                     <input type="radio" name='ceremonies' value={ceremonies.name}/>
@@ -40,7 +20,7 @@ const WeddingCeremony = () => {
                 <small>*If you need help choosing, there are hints at the bottom of the page</small>
             </form>
         </div>
-        <div className="formalities__notes">
+        <div className="notes">
             <form >
                 <label for="placeceremony">Place of wedding</label>
                 <textarea rows="5" type="text" id="placeceremony" placeholder="Example: Elevation Church 11416 E Independence Blvd
