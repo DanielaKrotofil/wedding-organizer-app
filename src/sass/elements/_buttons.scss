@@ -2,10 +2,11 @@
 
 .btn {
     border: none;
-    background-color: $color-beige;
+    background-color: $color-white;
     color: $color-green-basic;
     padding: 1em;
     border-radius: 0.3em;
+    box-shadow:  0 0.2em 0.35em $color-light-grey;
 }
 
 a {
