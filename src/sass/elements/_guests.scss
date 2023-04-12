@@ -47,11 +47,11 @@
         }
 
         form {
-            padding: 1em 2em;
+            padding: 0.5em 1.75em;
             display: flex;
             flex-direction: column;
             text-transform: uppercase;
-            gap: 0.65em;
+            gap: 0.5em;
 
             button {
                 box-shadow:  0 0.2em 0.35em $color-dark-grey;
