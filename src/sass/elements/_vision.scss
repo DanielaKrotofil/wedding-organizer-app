@@ -33,8 +33,18 @@
         color: $color-green-basic;
         width: 30%;
 
+        .d-none {
+            display: none;
+        }
+
         p {
             font-weight: 900;
+        }
+
+        li {
+            list-style: none;
+            position: relative;
+            padding: 0 0 0 20px;
         }
     }
 

@@ -2,10 +2,13 @@ import { useEffect, useState } from 'react'
 import { collection, getDocs } from "firebase/firestore";
 import { db } from '../firebase';
 import Inspirations from './VisionInspirations';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 const VisionStyles = () => {
     const [styles, setStyles] = useState([]);
-
+    const [isActive, setIsActive] = useState(true);
+ 
     useEffect(() => {
         getDocs(collection(db, "styles")).then((querySnapshot) => {
             const tempArr = [];
@@ -20,27 +23,27 @@ const VisionStyles = () => {
     if (!styles) return <div>Loading...</div>;
 
     const showDetails = () => {
-        console.log('klik');
+        setIsActive(current => !current);
     }
 
     const WeddingStylesLists = (props) => {
-        return (<>
+        return (<div  className={isActive ? 'd-none' : ''}>
         <p>Characteristic:</p>
-        {props.characteristic.map((el, index) => {return <li key={index}> {el}</li>})}
+        {props.characteristic.map((el, index) => {return <li key={index}> <FontAwesomeIcon icon={faHeart} /> {el}</li>})}
         <p>Primary colors:</p>
-        {props.color1.map((el, index) => {return <li key={index}> {el}</li>})}
+        {props.color1.map((el, index) => {return <li key={index}> <FontAwesomeIcon icon={faHeart} /> {el}</li>})}
         <p>Another colors:</p>
-        {props.color2.map((el, index) => {return <li key={index}> {el}</li>})}
+        {props.color2.map((el, index) => {return <li key={index}> <FontAwesomeIcon icon={faHeart} /> {el}</li>})}
         <p>Decorations:</p>
-        {props.decoration.map((el, index) => {return <li key={index}> {el}</li>})}
-        </>)
+        {props.decoration.map((el, index) => {return <li key={index}> <FontAwesomeIcon icon={faHeart} /> {el}</li>})}
+        </div>)
     }
 
     const WeddingStyles = () => {
         return (<>
             {styles.map(({theme, characteristics, mainColors, additionalColors, decorations}) => (
                 <div className="wedding-styles__element" key={theme}>
-                    <button className="dropdown" onClick={showDetails}>{theme}</button>
+                    <button className="dropdown" onClick={showDetails} >{theme}</button>
                     <WeddingStylesLists characteristic={characteristics} color1={mainColors} color2={additionalColors} decoration={decorations}/>
                 </div>))
             }
@@ -60,4 +63,3 @@ const VisionStyles = () => {
     )
 }
 export default VisionStyles
-
