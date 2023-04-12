@@ -1,4 +1,5 @@
 @import '../settings/variables';
+@import '../settings/rwd';
 
 .wedding-priorities {
     line-height: 1.5rem;
@@ -8,6 +9,12 @@
     &__selection {
         display: flex;
         justify-content: space-around;
+
+
+        @include mobile {
+            flex-direction: column;
+            padding: 1em;
+        }
 
         &-part {
             display: flex;
