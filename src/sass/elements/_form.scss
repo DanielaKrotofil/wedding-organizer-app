@@ -1,4 +1,5 @@
 @import '../settings/variables';
+@import '../settings/rwd';
 
 .formradio {
     &__title {
@@ -86,6 +87,13 @@
 
 .central {
     margin: 3rem 13rem;
+
+    @include tablet {
+        margin: 2rem 8rem;
+    }
+    @include mobile{
+        margin: 2rem 4.5rem;
+    }
 }
 
 .selections {
@@ -93,6 +101,11 @@
     justify-content: space-between;
     font-family: $font-family-freehand;
     margin-bottom: 0.75rem;
+
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+    }
 
     h2 {
         font-weight: 900;
