@@ -28,13 +28,22 @@
     gap: 0.1em;
     line-height: 1.4em;
     flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2em;
 
     &__element{
         color: $color-green-basic;
         width: 30%;
+        @include mobile {
+            width: 40%;
+        }
 
-        .d-none {
-            display: none;
+        &-dropdown {
+            border: none;
+            margin: 0.2em;
+            padding: 1em 2em;
+            width: 90%;
+            text-align: center;
         }
 
         p {
@@ -48,14 +57,10 @@
         }
     }
 
-    .dropdown {
-        border: none;
-        background-color: $color-green-basic;
-        color: $color-beige;
-        padding: 1em 2em;
-        width: 100%;
-        text-align: center;
-    }
+}
+
+.d-none {
+    display: none;
 }
 
 .vision__inspirations {
@@ -69,6 +74,7 @@
         display: flex;
         gap: 2em;
         flex-wrap: wrap;
+        justify-content: center;
 
         &-box {
             display: flex;

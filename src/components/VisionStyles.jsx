@@ -43,7 +43,7 @@ const VisionStyles = () => {
         return (<>
             {styles.map(({theme, characteristics, mainColors, additionalColors, decorations}) => (
                 <div className="wedding-styles__element" key={theme}>
-                    <button className="dropdown" onClick={showDetails} >{theme}</button>
+                    <button className="wedding-styles__element-dropdown btn" onClick={showDetails} >{theme}</button>
                     <WeddingStylesLists characteristic={characteristics} color1={mainColors} color2={additionalColors} decoration={decorations}/>
                 </div>))
             }
@@ -52,7 +52,7 @@ const VisionStyles = () => {
 
     return (
         <>
-        <section>
+        <section className='container'>
             <h2>Wedding Styles - hints</h2>
             <div className="wedding-styles">
                 <WeddingStyles styles={styles}/>
