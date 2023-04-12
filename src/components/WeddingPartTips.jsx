@@ -1,5 +1,6 @@
 import tableformal from '../assets/table-setting-formal.jpg';
 import tableinformal from '../assets/table-setting-informal.jpg';
+import HallsGetInfo from './WeddingHalsGetInfo';
 
 const Plates = () => {
     const simplestyle = ['boho', 'greenry', 'rustic'];
@@ -48,6 +49,7 @@ const PartyTipsTable = () => {
 
 export const PartyTips = () => {
     return (<div className='weddingparty__tips'>
-            <PartyTipsTable/>
+        <HallsGetInfo/>
+        <PartyTipsTable/>
     </div>)
 }

@@ -1,6 +1,9 @@
 @import '../settings/variables';
+@import '../settings/rwd';
+
 .weddingparty {
     line-height: 1.56em;
+    padding: 0 2em;
 
     h3, h2, p {
         padding-top: 1em;
@@ -8,21 +11,6 @@
 
     &__halls {
         margin-top: 3em;
-
-        &-examples {
-            margin: 1.5em;
-            display: flex;
-            gap: 0.5em;
-
-            ul {
-                margin-top: 1em;
-
-                li {
-                    list-style: none;
-                    margin-left: 0.5em;
-                }
-            }
-        }
     }
     &__tips {
         margin-top: 3em;

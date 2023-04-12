@@ -34,6 +34,10 @@ body {
         text-align: center;
     }
 
+    ol {
+        list-style-type: upper-roman;
+    }
+
     small {
         font-family: $font-family-freehand;
     }

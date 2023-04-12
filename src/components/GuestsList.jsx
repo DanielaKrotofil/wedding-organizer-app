@@ -85,14 +85,3 @@ const GuestsList = () => {
     </section>)
 }
 export default GuestsList
-/*
- <div >
-            {guestList.map(guests => <tr className="guestcard__list-singleguest" key={guests.id} onClick={() => addGuest(guests.id)}>
-                    <td>{guests.name} {guests.surname}</td>
-                    <td>{guests.address}</td>
-                    <td>{guests.phone}</td>
-                    <td>{guests.email}</td>
-                </tr>)
-            }
-        </div>
-*/
