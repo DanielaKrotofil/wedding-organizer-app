@@ -1,16 +1,18 @@
 @import '../settings/variables';
 
 table {
-    border: 0.1em solid $color-green-basic;
+    border: 0.1em solid $color-light-grey;
+    box-shadow:  0 0.2em 0.35em $color-light-grey;
+    color: $color-dark-grey;
+
     th {
         padding-top: 12px;
-        background-color: $color-green-basic;
-        color: $color-white;
+        background-color: $color-light-grey;
         padding: 0.5em;
-        font-size: 1.1em;
     }
+
     td {
-        border: 0.1em solid $color-green-basic;
+        border: 0.1em solid $color-light-grey;
         line-height: 1.56em;
         padding: 1em;
     }

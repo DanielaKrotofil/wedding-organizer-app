@@ -1,4 +1,5 @@
 @import '../settings/variables';
+@import '../settings/rwd';
 
 .guests {
     h1 {
@@ -7,10 +8,15 @@
 }
 .guestcard {
     display: flex;
+
+    @include mobile {
+        flex-direction: column;
+    }
     &-counter {
         text-align: right;
         font-family: $font-family-ornamental;
         font-weight: 900;
+        margin: 0 2em;
     }
     &-body {
         box-shadow: 0 0.5em 1em 0.12em $color-dark-grey;
@@ -26,6 +32,10 @@
         justify-content: center;
         max-width: 35%;
         max-height: 19em;
+
+        @include mobile {
+            max-width: 90%;
+        }
 
         h3 {
             font-family: $font-family-freehand;
@@ -43,10 +53,19 @@
             text-transform: uppercase;
             gap: 0.65em;
 
+            button {
+                box-shadow:  0 0.2em 0.35em $color-dark-grey;
+            }
+
             input {
+                font-family: $font-family-freehand;
                 background-color: $color-green-basic;
                 border: none;
                 border-bottom: 0.1em solid $color-white;
+                &::placeholder {
+                    color: $color-white;
+                    font-weight: 800;
+                }
                 &:focus {
                     background-color: $color-white;
                     border: 0.1em solid $color-white;
@@ -59,15 +78,15 @@
         width: 65%;
         padding: 1em;
         display: flex;
+        align-items: start;
+        justify-content: center;
 
-        &-singleguest {
-            display: flex;
-            gap: 6em;
-            padding: 1em;
+        @include mobile {
+            width: 90%;
+        }
 
-            &:nth-child(even) {
-                background: $color-light-grey;
-            }
+        table {
+            width: 100%;
         }
     }
 }

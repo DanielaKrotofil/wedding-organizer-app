@@ -41,16 +41,26 @@ const GuestsList = () => {
 
     const GuestFinalList = () => {
         return (<>
-        <div >
-            {guestList.map(guests => <div className="guestcard__list-singleguest" key={guests.id} onClick={() => addGuest(guests.id)}>
-                    <p>{guests.name} {guests.surname}</p>
-                    <p>{guests.address}</p>
-                    <p>{guests.phone}</p>
-                    <p>{guests.email}</p>
-                </div>)
+        <table>
+            <tbody>
+                <tr>
+                    <th colspan="4">Guest List</th>
+                </tr>
+                <tr>
+                    <th>Name and Surname</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                    <th>E-mail</th>
+                </tr>
+                {guestList.map(guests => <tr key={guests.id} onClick={() => addGuest(guests.id)}>
+                    <td>{guests.name} {guests.surname}</td>
+                    <td>{guests.address}</td>
+                    <td>{guests.phone}</td>
+                    <td>{guests.email}</td>
+                </tr>)
             }
-        </div>
-
+            </tbody>
+        </table>
         </>)
     }
     return (<section>
@@ -64,7 +74,7 @@ const GuestsList = () => {
                         <input value={phoneValue} onChange={updatePhone} type="number" placeholder="phone"/>
                         <input value={addressValue} onChange={updateAddress} type="text" placeholder="address"/>
                         <input value={emailValue} onChange={updateEmail} type="email" placeholder="e-mail"/>
-                        <button className="btn-add" type='submit'>Add</button>
+                        <button className="btn" type='submit'>Add guest</button>
                         <p className="guestcard__form-alert">{alert.join(', ')}</p>
                     </form>
             </div>
@@ -75,3 +85,14 @@ const GuestsList = () => {
     </section>)
 }
 export default GuestsList
+/*
+ <div >
+            {guestList.map(guests => <tr className="guestcard__list-singleguest" key={guests.id} onClick={() => addGuest(guests.id)}>
+                    <td>{guests.name} {guests.surname}</td>
+                    <td>{guests.address}</td>
+                    <td>{guests.phone}</td>
+                    <td>{guests.email}</td>
+                </tr>)
+            }
+        </div>
+*/
