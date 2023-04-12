@@ -8,12 +8,14 @@
 
     &__selection {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        gap: 3rem;
 
 
         @include mobile {
             flex-direction: column;
             padding: 1em;
+            gap: 1.5rem
         }
 
         &-part {
@@ -72,7 +74,7 @@
     &__view {
         padding: 1em;
         display: flex;
-        gap: 2em;
+        gap: 1.5em;
         flex-wrap: wrap;
         justify-content: center;
 
@@ -85,8 +87,8 @@
                 font-weight: 700
             }
             img {
-                max-width: 22rem;
-                height: 28rem;
+                width: 20.3rem;
+                height: 27rem;
             }
         }
     }
