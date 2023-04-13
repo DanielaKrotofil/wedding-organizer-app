@@ -22,7 +22,7 @@ const WeddingCeremony = () => {
         </div>
         <div className="notes">
             <form >
-                <label for="placeceremony">Place of wedding</label>
+                <label htmlFor="placeceremony">Place of wedding</label>
                 <textarea rows="5" type="text" id="placeceremony" placeholder="Example: Elevation Church 11416 E Independence Blvd
 Suite N, Matthews, NC, 28105" />
             </form>

@@ -24,24 +24,22 @@ const WeddingHallForm = () => {
     <div className="">
         <h2>Our wedding hall</h2>
         <div className="notes">
-            <form onSubmit={addNewDetail}>
-                <div>
-                    <form >
-                        <label for="placeceremony">Wedding venue name and address</label>
-                        <textarea rows="5" type="text" value={hallValue} onChange={updateHall}/>
-                    </form>
+            <div>
+                <form >
+                    <label htmlFor="placeceremony">Wedding venue name and address</label>
+                    <textarea rows="5" type="text" value={hallValue} onChange={updateHall}/>
+                </form>
 
-                    <form >
-                        <label>Person to contact</label>
-                        <textarea value={contactValue} onChange={updateContact}/>
-                    </form>
+                <form >
+                    <label>Person to contact</label>
+                    <textarea value={contactValue} onChange={updateContact}/>
+                </form>
 
-                    <form >
-                        <label>Notes</label>
-                        <textarea rows="15" cols="70"/>
-                    </form>
-                </div>
-            </form>
+                <form >
+                    <label>Notes</label>
+                    <textarea rows="15" cols="70"/>
+                </form>
+            </div>
         </div>
     </div>
     </>)
@@ -51,6 +49,7 @@ export default WeddingHallForm
 
 /*
 <div>
+<form onSubmit={addNewDetail}>
                     <label>Name (hall)</label>
                     <input type="text" value={nameValue} onChange={updateName} />
                     <label>Address (hall)</label>
@@ -78,5 +77,6 @@ export default WeddingHallForm
                     <label>Yes</label>
                     <input type="radio" id="nozaiks" />
                     <label>No</label>
+                    </form>
                 </div>
 */
