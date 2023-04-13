@@ -54,10 +54,10 @@ const HomeAbout = () => {
     <section className='container about'>
       <h2>About App</h2>
       <div className="about__app">
-        <ListsIcon/>
-        <HelpIcon/>
-        <InternetIcon/>
-        <PiggyIcon/>
+          <ListsIcon/>
+          <HelpIcon/>
+          <InternetIcon/>
+          <PiggyIcon/>
       </div>
     </section>
     </>)
