@@ -6,7 +6,7 @@ const Weddingparty = () => {
 
     return <section className="container weddingparty">
         <h1>Wedding Party</h1>
-        <WeddingHallForm/>
+        Test
         <div className="notes">
             <form >
                 <label>Notes</label>
