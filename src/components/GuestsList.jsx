@@ -44,7 +44,7 @@ const GuestsList = () => {
         <table>
             <tbody>
                 <tr>
-                    <th colspan="4">Guest List</th>
+                    <th colSpan="4">Guest List</th>
                 </tr>
                 <tr>
                     <th>Name and Surname</th>

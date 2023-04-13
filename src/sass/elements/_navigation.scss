@@ -28,5 +28,46 @@
                 color: $color-dark-grey;
             }
         }
+
+        @include mobile {
+            display: none;
+
+            &-mobile {
+                width:100%;
+                list-style:none;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: column;
+
+                .link {
+                    cursor: pointer;
+                    padding:.55em .45em;
+                    width:100%;
+                    font-size:1em;
+                    text-align:center;
+
+                    &:hover {
+                        background-color: $color-light-grey;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: $color-dark-grey;
+                    }
+                }
+              }
+        }
     }
 }
+
+.hamburger {
+    display: none;
+
+    @include mobile {
+        display: block;
+        padding: 1em;
+        margin: 0 .9em;
+        position: absolute;
+    }
+  }

@@ -1,16 +1,24 @@
-import { createRoot } from 'react-dom/client';
+import { useState } from "react";
 import { HashRouter, Route, Routes, Link, NavLink, Outlet} from 'react-router-dom';
 import Home from './components/Home';
 import Vision from './components/Vision';
 import Guests from './components/Guests';
 import Formalities from './components/Formalities';
 import Weddingparty from './components/Weddingparty';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const Layout = () => {
+  const [isNavExpanded, setIsNavExpanded] = useState(false);
+
   return (
       <>
           <nav className='nav'>
-              <ul className='menubar'>
+              <button className="hamburger"
+              onClick={() => {setIsNavExpanded(!isNavExpanded);}}>
+                <FontAwesomeIcon icon={faBars}/>
+              </button>
+              <ul className={isNavExpanded ? "menubar-mobile" : "menubar"}>
                   <li className='link'><NavLink to='/'>Home</NavLink></li>
                   <li className='link'><NavLink to='vision'>Vision</NavLink></li>
                   <li className='link'><NavLink to='guests'>Guests</NavLink></li>

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 223,
+            "activePatchIndex": 249,
             "patches": [
                 {
                     "date": 1679610917987,
@@ -900,6 +900,110 @@
                 {
                     "date": 1680248596095,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,8 @@\n import Vision from './components/Vision';\n import Guests from './components/Guests';\n import Formalities from './components/Formalities';\n import Weddingparty from './components/Weddingparty';\n-import WeddingDate from './components/Weddingdate';\n \n const Layout = () => {\n   return (\n       <>\n@@ -26,12 +25,8 @@\n \n const App = () => {\n   return (\n     <>\n-    <div>\n-      <p>Wedding Date:</p>\n-      <span></span>\n-    </div>\n       <HashRouter>\n             <Routes>\n                 <Route element={<Layout/>}>\n                     <Route path='/' element={<Home/>}/>\n"
+                },
+                {
+                    "date": 1681395008425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,9 @@\n                   <li className='link'><NavLink to='guests'>Guests</NavLink></li>\n                   <li className='link'><NavLink to='weddingparty'>Wedding Party</NavLink></li>\n                   <li className='link'><NavLink to='formalities'>Formalities</NavLink></li>\n               </ul>\n+              <button className=\"hamburger\" />\n           </nav>\n           <Outlet/>\n       </>\n   )\n"
+                },
+                {
+                    "date": 1681395789267,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n                   <li className='link'><NavLink to='guests'>Guests</NavLink></li>\n                   <li className='link'><NavLink to='weddingparty'>Wedding Party</NavLink></li>\n                   <li className='link'><NavLink to='formalities'>Formalities</NavLink></li>\n               </ul>\n-              <button className=\"hamburger\" />\n+              <button className=\"hamburger\"/>\n           </nav>\n           <Outlet/>\n       </>\n   )\n"
+                },
+                {
+                    "date": 1681395884473,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,10 @@\n import Vision from './components/Vision';\n import Guests from './components/Guests';\n import Formalities from './components/Formalities';\n import Weddingparty from './components/Weddingparty';\n+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';\n+import { faList, faWifi, faPiggyBank, faFaceGrinHearts } from '@fortawesome/free-solid-svg-icons';\n \n const Layout = () => {\n   return (\n       <>\n"
+                },
+                {
+                    "date": 1681395913510,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n                   <li className='link'><NavLink to='guests'>Guests</NavLink></li>\n                   <li className='link'><NavLink to='weddingparty'>Wedding Party</NavLink></li>\n                   <li className='link'><NavLink to='formalities'>Formalities</NavLink></li>\n               </ul>\n-              <button className=\"hamburger\"/>\n+              <FontAwesomeIcon icon={faList} className=\"hamburger\" />\n           </nav>\n           <Outlet/>\n       </>\n   )\n"
+                },
+                {
+                    "date": 1681396008946,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n                   <li className='link'><NavLink to='guests'>Guests</NavLink></li>\n                   <li className='link'><NavLink to='weddingparty'>Wedding Party</NavLink></li>\n                   <li className='link'><NavLink to='formalities'>Formalities</NavLink></li>\n               </ul>\n-              <FontAwesomeIcon icon={faList} className=\"hamburger\" />\n+              <button className=\"hamburger\" ><FontAwesomeIcon icon={faList} /></button>\n           </nav>\n           <Outlet/>\n       </>\n   )\n"
+                },
+                {
+                    "date": 1681396172385,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import Guests from './components/Guests';\n import Formalities from './components/Formalities';\n import Weddingparty from './components/Weddingparty';\n import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';\n-import { faList, faWifi, faPiggyBank, faFaceGrinHearts } from '@fortawesome/free-solid-svg-icons';\n+import { faBars } from '@fortawesome/free-solid-svg-icons';\n \n const Layout = () => {\n   return (\n       <>\n@@ -18,9 +18,9 @@\n                   <li className='link'><NavLink to='guests'>Guests</NavLink></li>\n                   <li className='link'><NavLink to='weddingparty'>Wedding Party</NavLink></li>\n                   <li className='link'><NavLink to='formalities'>Formalities</NavLink></li>\n               </ul>\n-              <button className=\"hamburger\" ><FontAwesomeIcon icon={faList} /></button>\n+              <button className=\"hamburger\" ><FontAwesomeIcon icon={faBars}/></button>\n           </nav>\n           <Outlet/>\n       </>\n   )\n"
+                },
+                {
+                    "date": 1681396945722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';\n import { faBars } from '@fortawesome/free-solid-svg-icons';\n \n const Layout = () => {\n+  const [isNavExpanded, setIsNavExpanded] = useState(false);\n   return (\n       <>\n           <nav className='nav'>\n               <ul className='menubar'>\n"
+                },
+                {
+                    "date": 1681396980937,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,11 @@\n                   <li className='link'><NavLink to='guests'>Guests</NavLink></li>\n                   <li className='link'><NavLink to='weddingparty'>Wedding Party</NavLink></li>\n                   <li className='link'><NavLink to='formalities'>Formalities</NavLink></li>\n               </ul>\n-              <button className=\"hamburger\" ><FontAwesomeIcon icon={faBars}/></button>\n+              <button className=\"hamburger\"onClick={() => {\n+          setIsNavExpanded(!isNavExpanded);\n+        }} ><FontAwesomeIcon icon={faBars}/></button>\n           </nav>\n           <Outlet/>\n       </>\n   )\n"
+                },
+                {
+                    "date": 1681397024462,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { createRoot } from 'react-dom/client';\n+import { useState } from \"react\";\n import { HashRouter, Route, Routes, Link, NavLink, Outlet} from 'react-router-dom';\n import Home from './components/Home';\n import Vision from './components/Vision';\n import Guests from './components/Guests';\n@@ -19,9 +19,9 @@\n                   <li className='link'><NavLink to='guests'>Guests</NavLink></li>\n                   <li className='link'><NavLink to='weddingparty'>Wedding Party</NavLink></li>\n                   <li className='link'><NavLink to='formalities'>Formalities</NavLink></li>\n               </ul>\n-              <button className=\"hamburger\"onClick={() => {\n+              <button className=\"hamburger\" onClick={() => {\n           setIsNavExpanded(!isNavExpanded);\n         }} ><FontAwesomeIcon icon={faBars}/></button>\n           </nav>\n           <Outlet/>\n"
+                },
+                {
+                    "date": 1681397075229,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,11 +19,12 @@\n                   <li className='link'><NavLink to='guests'>Guests</NavLink></li>\n                   <li className='link'><NavLink to='weddingparty'>Wedding Party</NavLink></li>\n                   <li className='link'><NavLink to='formalities'>Formalities</NavLink></li>\n               </ul>\n-              <button className=\"hamburger\" onClick={() => {\n-          setIsNavExpanded(!isNavExpanded);\n-        }} ><FontAwesomeIcon icon={faBars}/></button>\n+              <button className=\"hamburger\"\n+              onClick={() => {setIsNavExpanded(!isNavExpanded);}}>\n+                <FontAwesomeIcon icon={faBars}/>\n+              </button>\n           </nav>\n           <Outlet/>\n       </>\n   )\n"
+                },
+                {
+                    "date": 1681397387288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,11 @@\n   const [isNavExpanded, setIsNavExpanded] = useState(false);\n   return (\n       <>\n           <nav className='nav'>\n-              <ul className='menubar'>\n+              <ul className={\n+          isNavExpanded ? \"menubar expanded\" : \"menubar\"\n+        }'>\n                   <li className='link'><NavLink to='/'>Home</NavLink></li>\n                   <li className='link'><NavLink to='vision'>Vision</NavLink></li>\n                   <li className='link'><NavLink to='guests'>Guests</NavLink></li>\n                   <li className='link'><NavLink to='weddingparty'>Wedding Party</NavLink></li>\n"
+                },
+                {
+                    "date": 1681397393876,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,11 +12,9 @@\n   const [isNavExpanded, setIsNavExpanded] = useState(false);\n   return (\n       <>\n           <nav className='nav'>\n-              <ul className={\n-          isNavExpanded ? \"menubar expanded\" : \"menubar\"\n-        }'>\n+              <ul >\n                   <li className='link'><NavLink to='/'>Home</NavLink></li>\n                   <li className='link'><NavLink to='vision'>Vision</NavLink></li>\n                   <li className='link'><NavLink to='guests'>Guests</NavLink></li>\n                   <li className='link'><NavLink to='weddingparty'>Wedding Party</NavLink></li>\n"
+                },
+                {
+                    "date": 1681397400360,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,11 @@\n   const [isNavExpanded, setIsNavExpanded] = useState(false);\n   return (\n       <>\n           <nav className='nav'>\n-              <ul >\n+              <ul className={\n+          isNavExpanded ? \"menubar expanded\" : \"menubar\"\n+        }>\n                   <li className='link'><NavLink to='/'>Home</NavLink></li>\n                   <li className='link'><NavLink to='vision'>Vision</NavLink></li>\n                   <li className='link'><NavLink to='guests'>Guests</NavLink></li>\n                   <li className='link'><NavLink to='weddingparty'>Wedding Party</NavLink></li>\n"
+                },
+                {
+                    "date": 1681397574229,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,11 +12,9 @@\n   const [isNavExpanded, setIsNavExpanded] = useState(false);\n   return (\n       <>\n           <nav className='nav'>\n-              <ul className={\n-          isNavExpanded ? \"menubar expanded\" : \"menubar\"\n-        }>\n+              <ul className={isNavExpanded ? \"menubar expanded\" : \"menubar\"}>\n                   <li className='link'><NavLink to='/'>Home</NavLink></li>\n                   <li className='link'><NavLink to='vision'>Vision</NavLink></li>\n                   <li className='link'><NavLink to='guests'>Guests</NavLink></li>\n                   <li className='link'><NavLink to='weddingparty'>Wedding Party</NavLink></li>\n"
+                },
+                {
+                    "date": 1681397629692,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,10 @@\n import { faBars } from '@fortawesome/free-solid-svg-icons';\n \n const Layout = () => {\n   const [isNavExpanded, setIsNavExpanded] = useState(false);\n+  const [isNavExpanded, setIsNavExpanded] = useState(false);\n+\n   return (\n       <>\n           <nav className='nav'>\n               <ul className={isNavExpanded ? \"menubar expanded\" : \"menubar\"}>\n"
+                },
+                {
+                    "date": 1681397639409,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,9 @@\n import { faBars } from '@fortawesome/free-solid-svg-icons';\n \n const Layout = () => {\n   const [isNavExpanded, setIsNavExpanded] = useState(false);\n-  const [isNavExpanded, setIsNavExpanded] = useState(false);\n-\n+  const [isActive, setIsActive] = useState(true);\n   return (\n       <>\n           <nav className='nav'>\n               <ul className={isNavExpanded ? \"menubar expanded\" : \"menubar\"}>\n"
+                },
+                {
+                    "date": 1681397648848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,11 @@\n \n const Layout = () => {\n   const [isNavExpanded, setIsNavExpanded] = useState(false);\n   const [isActive, setIsActive] = useState(true);\n+  const showDetails = () => {\n+    setIsActive(current => !current);\n+  }\n   return (\n       <>\n           <nav className='nav'>\n               <ul className={isNavExpanded ? \"menubar expanded\" : \"menubar\"}>\n"
+                },
+                {
+                    "date": 1681397691949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n   }\n   return (\n       <>\n           <nav className='nav'>\n-              <ul className={isNavExpanded ? \"menubar expanded\" : \"menubar\"}>\n+              <ul className={isActive ? 'd-none' : 'menubar'}>\n                   <li className='link'><NavLink to='/'>Home</NavLink></li>\n                   <li className='link'><NavLink to='vision'>Vision</NavLink></li>\n                   <li className='link'><NavLink to='guests'>Guests</NavLink></li>\n                   <li className='link'><NavLink to='weddingparty'>Wedding Party</NavLink></li>\n"
+                },
+                {
+                    "date": 1681397746595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n   }\n   return (\n       <>\n           <nav className='nav'>\n-              <ul className={isActive ? 'd-none' : 'menubar'}>\n+              <ul className={isActive ? 'd-none' : ''}>\n                   <li className='link'><NavLink to='/'>Home</NavLink></li>\n                   <li className='link'><NavLink to='vision'>Vision</NavLink></li>\n                   <li className='link'><NavLink to='guests'>Guests</NavLink></li>\n                   <li className='link'><NavLink to='weddingparty'>Wedding Party</NavLink></li>\n"
+                },
+                {
+                    "date": 1681397754178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,16 +9,13 @@\n import { faBars } from '@fortawesome/free-solid-svg-icons';\n \n const Layout = () => {\n   const [isNavExpanded, setIsNavExpanded] = useState(false);\n-  const [isActive, setIsActive] = useState(true);\n-  const showDetails = () => {\n-    setIsActive(current => !current);\n-  }\n+\n   return (\n       <>\n           <nav className='nav'>\n-              <ul className={isActive ? 'd-none' : ''}>\n+              <ul className={isNavExpanded ? \"menubar expanded\" : \"menubar\"}>\n                   <li className='link'><NavLink to='/'>Home</NavLink></li>\n                   <li className='link'><NavLink to='vision'>Vision</NavLink></li>\n                   <li className='link'><NavLink to='guests'>Guests</NavLink></li>\n                   <li className='link'><NavLink to='weddingparty'>Wedding Party</NavLink></li>\n"
+                },
+                {
+                    "date": 1681398292049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n \n   return (\n       <>\n           <nav className='nav'>\n-              <ul className={isNavExpanded ? \"menubar expanded\" : \"menubar\"}>\n+              <ul className={isNavExpanded ? \"menubar-mobile\" : \"menubar\"}>\n                   <li className='link'><NavLink to='/'>Home</NavLink></li>\n                   <li className='link'><NavLink to='vision'>Vision</NavLink></li>\n                   <li className='link'><NavLink to='guests'>Guests</NavLink></li>\n                   <li className='link'><NavLink to='weddingparty'>Wedding Party</NavLink></li>\n"
+                },
+                {
+                    "date": 1681398329837,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n \n   return (\n       <>\n           <nav className='nav'>\n-              <ul className={isNavExpanded ? \"menubar-mobile\" : \"menubar\"}>\n+              <ul className={isNavExpanded ? \"menubar-mobile mobile\" : \"menubar\"}>\n                   <li className='link'><NavLink to='/'>Home</NavLink></li>\n                   <li className='link'><NavLink to='vision'>Vision</NavLink></li>\n                   <li className='link'><NavLink to='guests'>Guests</NavLink></li>\n                   <li className='link'><NavLink to='weddingparty'>Wedding Party</NavLink></li>\n"
+                },
+                {
+                    "date": 1681398340488,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n \n   return (\n       <>\n           <nav className='nav'>\n-              <ul className={isNavExpanded ? \"menubar-mobile mobile\" : \"menubar\"}>\n+              <ul className={isNavExpanded ? \"menubar-mobile menubar\" : \"menubar\"}>\n                   <li className='link'><NavLink to='/'>Home</NavLink></li>\n                   <li className='link'><NavLink to='vision'>Vision</NavLink></li>\n                   <li className='link'><NavLink to='guests'>Guests</NavLink></li>\n                   <li className='link'><NavLink to='weddingparty'>Wedding Party</NavLink></li>\n"
+                },
+                {
+                    "date": 1681398357041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n \n   return (\n       <>\n           <nav className='nav'>\n-              <ul className={isNavExpanded ? \"menubar-mobile menubar\" : \"menubar\"}>\n+              <ul className={isNavExpanded ? \"menubar-mobile\" : \"menubar\"}>\n                   <li className='link'><NavLink to='/'>Home</NavLink></li>\n                   <li className='link'><NavLink to='vision'>Vision</NavLink></li>\n                   <li className='link'><NavLink to='guests'>Guests</NavLink></li>\n                   <li className='link'><NavLink to='weddingparty'>Wedding Party</NavLink></li>\n"
+                },
+                {
+                    "date": 1681398862782,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,19 +13,20 @@\n \n   return (\n       <>\n           <nav className='nav'>\n+              <button className=\"hamburger\"\n+              onClick={() => {setIsNavExpanded(!isNavExpanded);}}>\n+                <FontAwesomeIcon icon={faBars}/>\n+              </button>\n               <ul className={isNavExpanded ? \"menubar-mobile\" : \"menubar\"}>\n                   <li className='link'><NavLink to='/'>Home</NavLink></li>\n                   <li className='link'><NavLink to='vision'>Vision</NavLink></li>\n                   <li className='link'><NavLink to='guests'>Guests</NavLink></li>\n                   <li className='link'><NavLink to='weddingparty'>Wedding Party</NavLink></li>\n                   <li className='link'><NavLink to='formalities'>Formalities</NavLink></li>\n               </ul>\n-              <button className=\"hamburger\"\n-              onClick={() => {setIsNavExpanded(!isNavExpanded);}}>\n-                <FontAwesomeIcon icon={faBars}/>\n-              </button>\n+              \n           </nav>\n           <Outlet/>\n       </>\n   )\n"
+                },
+                {
+                    "date": 1681398874201,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,8 @@\n                   <li className='link'><NavLink to='guests'>Guests</NavLink></li>\n                   <li className='link'><NavLink to='weddingparty'>Wedding Party</NavLink></li>\n                   <li className='link'><NavLink to='formalities'>Formalities</NavLink></li>\n               </ul>\n-              \n           </nav>\n           <Outlet/>\n       </>\n   )\n"
                 }
             ],
             "date": 1679610917987,
