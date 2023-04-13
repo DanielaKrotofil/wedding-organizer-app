@@ -24,7 +24,6 @@ const WeddingHallForm = () => {
     <div className="">
         <h2>Our wedding hall</h2>
         <div className="">
-            <h3>Enter hall details</h3>
             <form onSubmit={addNewDetail}>
             <label>Name (hall)</label>
             <input type="text" value={nameValue} onChange={updateName} />
@@ -57,7 +56,7 @@ const WeddingHallForm = () => {
         </div>
         <div className="notes">
             <form >
-                <label>Notes / other arrangements</label>
+                <label>Notes</label>
                 <textarea rows="15" cols="70"/>
             </form>
         </div>
