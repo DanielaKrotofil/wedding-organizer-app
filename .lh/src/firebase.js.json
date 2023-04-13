@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 4,
+            "activePatchIndex": 5,
             "patches": [
                 {
                     "date": 1679612871847,
@@ -24,6 +24,10 @@
                 {
                     "date": 1679614574110,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,4 +19,5 @@\n \r\n // Initialize Firebase\r\n const app = initializeApp(firebaseConfig);\r\n const analytics = getAnalytics(app);\r\n+export const db = getFirestore(app);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681376665210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   authDomain: \"wedding-organizer-ac3e2.firebaseapp.com\",\r\n   projectId: \"wedding-organizer-ac3e2\",\r\n   storageBucket: \"wedding-organizer-ac3e2.appspot.com\",\r\n   messagingSenderId: \"1087429421018\",\r\n-  appId: \"1:1087429421018:web:1a1fc3a795160e2646c2e3\",\r\n+  appId: \"firebase use \\\",\r\n   measurementId: \"G-HK7B8ZCKBK\"\r\n };\r\n \r\n // Initialize Firebase\r\n"
                 }
             ],
             "date": 1679612871847,
