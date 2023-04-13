@@ -54,14 +54,9 @@ const WeddingHallForm = () => {
             <label>No</label>
             </form>
         </div>
-        <div className="notes">
-            <form >
-                <label>Notes</label>
-                <textarea rows="15" cols="70"/>
-            </form>
-        </div>
     </div>
     </>)
 }
+/* testuje czy dziala update*/
 
 export default WeddingHallForm
