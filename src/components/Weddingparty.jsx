@@ -1,4 +1,3 @@
-
 import { PartyTips } from './WeddingPartTips';
 import WeddingHallForm from './WeddingPartyHalls';
 

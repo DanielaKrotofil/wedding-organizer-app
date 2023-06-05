@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 23,
+            "activePatchIndex": 25,
             "patches": [
                 {
                     "date": 1679610980897,
@@ -100,6 +100,14 @@
                 {
                     "date": 1681235776583,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,5 +9,6 @@\n @import './elements/guests';\r\n @import './elements/party';\r\n @import './elements/basic';\r\n @import './elements/footer';\r\n-@import './elements/form';\n\\ No newline at end of file\n+@import './elements/form';\r\n+@import './elements/table';\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685990806966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,5 +10,6 @@\n @import './elements/party';\r\n @import './elements/basic';\r\n @import './elements/footer';\r\n @import './elements/form';\r\n-@import './elements/table';\n\\ No newline at end of file\n+@import './elements/table';\r\n+@import './elements/person';\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685994299004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,5 +11,6 @@\n @import './elements/basic';\r\n @import './elements/footer';\r\n @import './elements/form';\r\n @import './elements/table';\r\n-@import './elements/person';\n\\ No newline at end of file\n+@import './elements/person';\r\n+@import './elements/loading';\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1679610980897,
