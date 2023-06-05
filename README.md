@@ -1,5 +1,5 @@
 # wedding-organizer-app
- The project includes: HTML, SASS, REACT.JS
+ The project includes: HTML, SASS, CSS ANIMATIONS, REACT.JS
 
 The aim of the project is to create a tool that will help organize tasks to be done before the wedding day and inspire couples to new ideas.
 
